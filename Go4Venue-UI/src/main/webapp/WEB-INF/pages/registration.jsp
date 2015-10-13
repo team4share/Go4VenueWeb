@@ -51,30 +51,35 @@
             </ul>
             <p>Already Signed Up? Click <a class="color-green" href="login">Sign In</a> to login your account.</p>
         </div>
-         <div class="input-group margin-bottom-10">
+         <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <input type="text" class="form-control" placeholder="UserName" ng-model = "formData.userName">
+            <input type="text" class="form-control" placeholder="FirstName" ng-model = "formData.name">
         </div>
-        <div class="input-group margin-bottom-10">
+        <div class="input-group margin-bottom-5">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input type="text" class="form-control" placeholder="LastName" ng-model = "formData.lastname">
+        </div>
+        
+        <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
             <input type="email" class="form-control" placeholder="Email" ng-model = "formData.email">
         </div>
-        <div class="input-group margin-bottom-10">
+        <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span>
             <!--=== Code added for extra field +91 ===-->
             <span class="input-group-addon"><i class="fa">+91</i></span>  
            <input type="text" class="form-control" placeholder="Contact Number" ng-model = "formData.contactNumber" maxlength="10">
         </div>
-        <div class="input-group margin-bottom-10">
+        <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
             <input type="text" class="form-control" placeholder="Password" ng-model = "formData.password">
         </div>
-        <div class="input-group margin-bottom-10">
+        <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-key"></i></span>
             <input type="text" class="form-control" placeholder="Confirm Password" ng-model = "formData.confirmPassword">
         </div>
         
-        <div class="input-group margin-bottom-10">
+        <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa  fa-group"></i></span>     
             <span class="input-group-addon"><input type="radio" name="user_type" ng-model = "formData.userType" value ="seeker"> Venue Seeker</span>
             <span class="input-group-addon"><input type="radio" name="user_type" ng-model = "formData.userType" value = "owner"> Venue Owner</span>

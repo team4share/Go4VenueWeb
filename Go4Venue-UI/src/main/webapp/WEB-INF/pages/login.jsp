@@ -96,9 +96,9 @@
 </script>
 <script type="text/javascript">
     $.backstretch([
-      "assets/img/bg/reg_bg1.jpg",
-      "assets/img/bg/reg_bg2.jpg",
-      "assets/img/bg/reg_bg3.jpg",
+      "resources/assets/img/bg/reg_bg1.jpg",
+      "resources/assets/img/bg/reg_bg2.jpg",
+      "resources/assets/img/bg/reg_bg3.jpg",
       ], {
         fade: 1000,
         duration: 7000

@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="topbar-buttons pull-right">
-                            <a href="login.html" class="btn-u btn-brd btn-brd-hover btn-u-light margin-right-5">Sign In</a>
+                            <a href="login" class="btn-u btn-brd btn-brd-hover btn-u-light margin-right-5">Sign In</a>
                             <a href="register" class="btn-u btn-brd btn-brd-hover btn-u-light">Sign Up</a>
                         </div>
                     </div>

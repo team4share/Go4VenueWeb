@@ -1,1 +1,30 @@
 /* Add here all your css styles (customizations) */
+
+/* SignUp Form top border changed to purple  margin changed  to 40px*/
+
+.reg-block {
+	
+	border-top: solid 2px #7323DC;
+        
+}
+/* margin for signup block */
+.reg-block-margin
+{
+margin: 0px auto;
+}
+
+
+
+/* SignUp Form top border logo-position*/
+
+.reg-logo
+{
+   margin: 10px auto;
+
+}
+
+/*margin for login*/
+.login-block-margin
+{
+margin: 40px auto;
+}
