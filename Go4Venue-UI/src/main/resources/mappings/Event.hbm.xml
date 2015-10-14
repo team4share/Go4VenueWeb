@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.go4venue.web.persistence.beans.Event" table="event" entity-name="event" >
+		<id name="key" type="java.lang.Long" column="id"  />  
+		<property name="eventName" column="event_name" type="java.lang.String"/>
+	</class>
+
+</hibernate-mapping>
