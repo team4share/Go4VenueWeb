@@ -8,19 +8,20 @@ public class Event implements Serializable{
      */
     private static final long serialVersionUID = 1L;
     
-    private long id ;
+    private long key ;
     private String eventName;
+    
     /**
-     * @return the id
+     * @return the key
      */
-    public long getId() {
-	return id;
+    public long getKey() {
+	return key;
     }
     /**
-     * @param id the id to set
+     * @param key the key to set
      */
-    public void setId(long id) {
-	this.id = id;
+    public void setKey(long key) {
+	this.key = key;
     }
     /**
      * @return the eventName
@@ -34,4 +35,5 @@ public class Event implements Serializable{
     public void setEventName(String eventName) {
 	this.eventName = eventName;
     }
+  
 }
