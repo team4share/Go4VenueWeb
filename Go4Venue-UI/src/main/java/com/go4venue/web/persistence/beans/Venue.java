@@ -8,7 +8,7 @@ public class Venue implements Serializable{
      * 
      */
     private static final long serialVersionUID = 1L;
-    private long id;
+    private long key;
     private String venueName;
     private String venueCapacity;
     private long venuePrice;
@@ -19,14 +19,14 @@ public class Venue implements Serializable{
     /**
      * @return the id
      */
-    public long getId() {
-        return id;
+    public long getKey() {
+        return key;
     }
     /**
      * @param id the id to set
      */
-    public void setId(long id) {
-        this.id = id;
+    public void setKey(long key) {
+        this.key = key;
     }
     /**
      * @return the venueName
@@ -104,12 +104,12 @@ public class Venue implements Serializable{
      * @return the venueCapacity
      */
     public String getVenueCapacity() {
-	    return venueCapacity;
+	return venueCapacity;
     }
     /**
      * @param venueCapacity the venueCapacity to set
      */
     public void setVenueCapacity(String venueCapacity) {
-	    this.venueCapacity = venueCapacity;
+	this.venueCapacity = venueCapacity;
     }
 }
