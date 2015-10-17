@@ -1,3 +1,4 @@
+
 var app = angular.module('app', []);
 app.controller('UserController', function($scope, $http) {
 	$scope.submit = function(formData) {
@@ -10,7 +11,21 @@ app.controller('UserController', function($scope, $http) {
 				'Content-Type' : 'application/json'
 			}
 		}).success(function(response) {
-			
+			console.log(response)
+			alert("Successfully Registered.");
+
+		});
+	}	
+	$scope.login = function(loginInfo) {
+		$http({
+			method : 'POST',
+			url : 'loginUser',
+			data : formData,
+			headers : {
+				'Content-Type' : 'application/json'
+			}
+		}).success(function(response) {
+			console.log(response)
 			alert("Successfully Registered.");
 
 		});

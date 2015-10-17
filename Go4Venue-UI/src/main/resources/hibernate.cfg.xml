@@ -13,7 +13,7 @@
 		<property name="hibernate.order_updates">true</property>
 		<!-- <property name="current_session_context_class">thread</property> -->
 		<!-- <property name="hbm2ddl.auto">create</property> -->
-		<!-- <property name="hbm2ddl.import_files">/ALL_DML.sql</property> -->
+		<!-- <property name="hbm2ddl.import_files">/all_dml.sql</property> -->
 		<!-- <property name="hbm2ddl.import_files_sql_extractor">org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor</property> --> 
 		
 		<!-- Tables -->

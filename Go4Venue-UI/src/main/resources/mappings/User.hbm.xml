@@ -6,6 +6,8 @@
 		<id name="key" type="java.lang.Integer" column="id">
 			<generator class="native"/>
 		</id>
+		<property name="firstName" column="first_name" type="java.lang.String" />		
+		<property name="lastName" column="last_name" type="java.lang.String" />
 		<property name="email" column="email" type="java.lang.String" />
 		<property name="password" column="password" type="java.lang.String" />
 		<property name="confirmPassword" column="confirm_password" type="java.lang.String" />

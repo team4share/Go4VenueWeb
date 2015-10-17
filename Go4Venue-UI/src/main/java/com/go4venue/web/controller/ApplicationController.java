@@ -32,7 +32,7 @@ public class ApplicationController {
     public String displayHomePage(ModelMap model) {
 	LOG.info("home page of the site was requested.");
 	//model.addAttribute("name", "Project Starts From Here..");
-	String homePage = "index";
+	String homePage = "Index";
 	return homePage;
     }
     /**
@@ -49,6 +49,6 @@ public class ApplicationController {
 	} catch (Exception exception) {
 	    LOG.error("Exception Occured While downloading the images" , exception);
 	}
-	return "hello";
+	return "DownloadImagesPage";
     }
 }
