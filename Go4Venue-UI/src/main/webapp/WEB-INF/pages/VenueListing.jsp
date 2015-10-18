@@ -108,7 +108,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img id="logo-header" src="../resources/assets/img/go.png" alt="Logo">
+                        <img id="logo-header" src="resources/assets/img/go.png" alt="Logo">
                     </a>
                 </div>
 
@@ -506,7 +506,7 @@
                     <div class="list-product-description product-description-brd margin-bottom-30">
                         <div class="row">
                             <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-1.jpg" alt=""></a>
+                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="resources/assets/img/venue_images/venue-1.jpg" alt=""></a>
                             </div> 
                             <div class="col-sm-8 product-description">
                                 <div class="overflow-h margin-bottom-5">
@@ -544,169 +544,9 @@
                         </div>
                     </div>    
 
-                    <div class="list-product-description product-description-brd margin-bottom-30">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-2.jpg" alt=""></a>
-                            </div> 
-                            <div class="col-sm-8 product-description">
-                                <div class="overflow-h margin-bottom-5">
-                                    <ul class="list-inline overflow-h">
-                                        <li><h4 class="title-price"><a href="shop-ui-inner.html">Venue2</a></h4></li>
-                                        <li><span class="gender text-uppercase">The X</span></li>
-                                        <li class="pull-right">
-                                            <ul class="list-inline product-ratings">
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                            </ul>
-                                        </li>
-                                    </ul>    
-                                    <div class="margin-bottom-10">
-                                        <span class="title-price margin-right-10">$60.00</span>
-                                        <span class="title-price line-through">$95.00</span>
-                                    </div>    
-                                    <p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-                                    <ul class="list-inline add-to-wishlist margin-bottom-20">
-                                        <li class="wishlist-in">
-                                            <i class="fa fa-heart"></i>
-                                            <a href="#">Add To Shortlist</a>
-                                        </li>
-                                        <li class="compare-in">
-                                            <i class="fa fa-exchange"></i>
-                                            <a href="#">Add to Compare</a>
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="btn-u btn-u-sea-shop">Add to Cart</button>
-                                </div>    
-                            </div>
-                        </div>
-                    </div>    
+                   
 
-                    <div class="list-product-description product-description-brd margin-bottom-30">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-3.jpg" alt=""></a>
-                            </div> 
-                            <div class="col-sm-8 product-description">
-                                <div class="overflow-h margin-bottom-5">
-                                    <ul class="list-inline overflow-h">
-                                        <li><h4 class="title-price"><a href="shop-ui-inner.html">Venue 3</a></h4></li>
-                                        <li><span class="gender text-uppercase">The PQRS Resort</span></li>
-                                        <li class="pull-right">
-                                            <ul class="list-inline product-ratings">
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                            </ul>
-                                        </li>
-                                    </ul>    
-                                    <div class="margin-bottom-10">
-                                        <span class="title-price margin-right-10">$60.00</span>
-                                        <span class="title-price line-through">$95.00</span>
-                                    </div>    
-                                    <p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-                                    <ul class="list-inline add-to-wishlist margin-bottom-20">
-                                        <li class="wishlist-in">
-                                            <i class="fa fa-heart"></i>
-                                            <a href="#">Add to Shortlist</a>
-                                        </li>
-                                        <li class="compare-in">
-                                            <i class="fa fa-exchange"></i>
-                                            <a href="#">Add to Compare</a>
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="btn-u btn-u-sea-shop">Add to Cart</button>
-                                </div>    
-                            </div>
-                        </div>
-                    </div>    
 
-                    <div class="list-product-description product-description-brd margin-bottom-30">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-4.jpg" alt=""></a>
-                            </div> 
-                            <div class="col-sm-8 product-description">
-                                <div class="overflow-h margin-bottom-5">
-                                    <ul class="list-inline overflow-h">
-                                        <li><h4 class="title-price"><a href="shop-ui-inner.html">Venue4</a></h4></li>
-                                        <li><span class="gender text-uppercase">Brij Villa</span></li>
-                                        <li class="pull-right">
-                                            <ul class="list-inline product-ratings">
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                            </ul>
-                                        </li>
-                                    </ul>    
-                                    <div class="margin-bottom-10">
-                                        <span class="title-price margin-right-10">$60.00</span>
-                                        <span class="title-price line-through">$95.00</span>
-                                    </div>    
-                                    <p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-                                    <ul class="list-inline add-to-wishlist margin-bottom-20">
-                                        <li class="wishlist-in">
-                                            <i class="fa fa-heart"></i>
-                                            <a href="#">Add to Wishlist</a>
-                                        </li>
-                                        <li class="compare-in">
-                                            <i class="fa fa-exchange"></i>
-                                            <a href="#">Add to Compare</a>
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="btn-u btn-u-sea-shop">Add to Cart</button>
-                                </div>    
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="list-product-description product-description-brd">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-5.jpg" alt=""></a>
-                            </div> 
-                            <div class="col-sm-8 product-description">
-                                <div class="overflow-h margin-bottom-5">
-                                    <ul class="list-inline overflow-h">
-                                        <li><h4 class="title-price"><a href="shop-ui-inner.html">Venue 5</a></h4></li>
-                                        <li><span class="gender text-uppercase">Rockwell Palace</span></li>
-                                        <li class="pull-right">
-                                            <ul class="list-inline product-ratings">
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                            </ul>
-                                        </li>
-                                    </ul>    
-                                    <div class="margin-bottom-10">
-                                        <span class="title-price margin-right-10">$60.00</span>
-                                        <span class="title-price line-through">$95.00</span>
-                                    </div>    
-                                    <p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-                                    <ul class="list-inline add-to-wishlist margin-bottom-20">
-                                        <li class="wishlist-in">
-                                            <i class="fa fa-heart"></i>
-                                            <a href="#">Add to ShortList</a>
-                                        </li>
-                                        <li class="compare-in">
-                                            <i class="fa fa-exchange"></i>
-                                            <a href="#">Add to Compare</a>
-                                        </li>
-                                    </ul>
-                                    <button type="button" class="btn-u btn-u-sea-shop">Add to Cart</button>
-                                </div>    
-                            </div>
-                        </div>
-                    </div>     
                 </div><!--/end filter resilts-->
 
                 <div class="text-center">

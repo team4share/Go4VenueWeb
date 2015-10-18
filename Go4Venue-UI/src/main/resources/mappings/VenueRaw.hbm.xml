@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.go4venue.web.persistence.beans.VenueRaw" table="venue_raw" entity-name="VenueRaw">
+		<id name="key" type="java.lang.Long" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="venueName" column="venue_name" type="java.lang.String" />		
+		<property name="venuePrice" column="venue_price" type="java.lang.String" />
+		<property name="venueCapacity" column="venue_capacity" type="java.lang.String" />
+		<property name="venueType" column="venue_type" type="java.lang.String" />
+		<property name="venueContact" column="venue_contact" type="java.lang.String" />
+		<property name="venueContractId" column="venue_contract_id" type="java.lang.Long" />
+		<property name="venueAddress" column="venue_address" type="java.lang.String" />
+		<property name="venueDescription" column="venue_description" type="java.lang.String" />
+		<property name="venueUrl" column="venue_url" type="java.lang.String" />
+		<property name="venueOperatingTime" column="venue_operating_time" type="java.lang.String" />
+		<property name="venueOcassions" column="venue_ocassions" type="java.lang.String" />
+		<property name="venueCusines" column="venue_cusines" type="java.lang.String" />
+		<property name="venueFacilities" column="venue_facilities" type="java.lang.String" />
+	
+	</class>
+</hibernate-mapping>

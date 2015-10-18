@@ -164,18 +164,26 @@
     </div>
     <!--=== End Header v2 ===-->
     <!-- Image Gradient Go4Venue -->
+    
     <div class="interactive-slider-v2">
         <div class="container" ng-controller = "SearchController">
             <h1>Party| Venue</h1>
             			
-           				<select ></select>
+           			<form action="listVenues" id="searchVenue" name = "venueSearchForm" method="post" modelAttribute="venueSearchInfo">
                         <div class="topbar-buttons">
-                            <Select class="btn-u btn-brd btn-brd-hover btn-u-light"><option> Select Occasion</option></Select> 
-                            <Select  class="btn-u btn-brd btn-brd-hover btn-u-light"><option> Select Location</option></Select>
-                            <button class=" glyphicon glyphicon-search btn-u btn-brd btn-brd-hover btn-u-light"> Search</button>
+                            <Select class="btn-u btn-brd btn-brd-hover btn-u-light" name = "occasionId">
+                            	<option value = "O1"> Wedding</option>
+                            	<option value ="O2"> Birthday Party</option>
+                            </Select> 
+                            
+                            <Select  class="btn-u btn-brd btn-brd-hover btn-u-light" name = "locationId">
+                                <option value = "E1">Delhi/NCR</option>
+                                <option value = "E2">Bangalore</option>
+                            </Select>
+                            <button type = "submit" class=" glyphicon glyphicon-search btn-u btn-brd btn-brd-hover btn-u-light"> Search</button>
                             
                         </div>
-                    
+                    </form>
 
         </div>
     </div>

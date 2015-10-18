@@ -7,6 +7,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.go4venue.web.core.beans.VenueSearchInfo;
 import com.go4venue.web.service.ApplicationService;
 import com.go4venue.web.service.CollectImagesService;
 /**
@@ -32,6 +33,8 @@ public class ApplicationController {
     public String displayHomePage(ModelMap model) {
 	LOG.info("home page of the site was requested.");
 	//model.addAttribute("name", "Project Starts From Here..");
+	VenueSearchInfo venueSearchInfo = new VenueSearchInfo();
+	model.put("venueSearchInfo",venueSearchInfo);
 	String homePage = "Index";
 	return homePage;
     }
