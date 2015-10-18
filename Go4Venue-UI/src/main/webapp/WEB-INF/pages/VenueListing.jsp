@@ -18,28 +18,28 @@
     <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/shop.style.css">
+    <link rel="stylesheet" href="resources/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/assets/css/shop.style.css">
     
     <!-- CSS Header and Footer -->
-    <link rel="stylesheet" href="assets/css/headers/header-v5.css">
-    <link rel="stylesheet" href="assets/css/footers/footer-v4.css">
+    <link rel="stylesheet" href="resources/assets/css/headers/header-v5.css">
+    <link rel="stylesheet" href="resources/assets/css/footers/footer-v4.css">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/animate.css">    
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/noUiSlider/jquery.nouislider.min.css">
-    <link rel="stylesheet" href="assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="resources/assets/plugins/animate.css">    
+    <link rel="stylesheet" href="resources/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="resources/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/assets/plugins/noUiSlider/jquery.nouislider.min.css">
+    <link rel="stylesheet" href="resources/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
     
     <!-- Style Switcher -->
-    <link rel="stylesheet" href="assets/css/plugins/style-switcher.css"> 
+    <link rel="stylesheet" href="resources/assets/css/plugins/style-switcher.css"> 
 
     <!-- CSS Theme -->
-    <link rel="stylesheet" href="assets/css/theme-colors/purple.css" id="style_color">
+    <link rel="stylesheet" href="resources/assets/css/theme-colors/purple.css" id="style_color">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="resources/assets/css/custom.css">
 </head> 
 
 <body class="header-fixed">
@@ -108,7 +108,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img id="logo-header" src="../assets/img/go.png" alt="Logo">
+                        <img id="logo-header" src="../resources/assets/img/go.png" alt="Logo">
                     </a>
                 </div>
 
@@ -121,7 +121,7 @@
                             <span class="badge badge-sea rounded-x">3</span>
                             <ul class="list-unstyled badge-open mCustomScrollbar" data-mcs-theme="minimal-dark">
                                 <li>
-                                    <img src="assets/img/thumb/venue-1-thumb.jpg" alt="">
+                                    <img src="resources/assets/img/thumb/venue-1-thumb.jpg" alt="">
                                     <button type="button" class="close">×</button>
                                     <div class="overflow-h">
                                         <span>Venue 1</span>
@@ -129,7 +129,7 @@
                                     </div>    
                                 </li>
                                 <li>
-                                    <img src="assets/img/thumb/venue-2-thumb.jpg" alt="">
+                                    <img src="resources/assets/img/thumb/venue-2-thumb.jpg" alt="">
                                     <button type="button" class="close">×</button>
                                     <div class="overflow-h">
                                         <span>Venue 2</span>
@@ -137,7 +137,7 @@
                                     </div>    
                                 </li>
                                 <li>
-                                    <img src="assets/img/thumb/venue-3-thumb.jpg" alt="">
+                                    <img src="resources/assets/img/thumb/venue-3-thumb.jpg" alt="">
                                     <button type="button" class="close">×</button>
                                     <div class="overflow-h">
                                         <span>Venue 3</span>
@@ -506,7 +506,7 @@
                     <div class="list-product-description product-description-brd margin-bottom-30">
                         <div class="row">
                             <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../assets/img/venue_images/venue-1.jpg" alt=""></a>
+                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-1.jpg" alt=""></a>
                             </div> 
                             <div class="col-sm-8 product-description">
                                 <div class="overflow-h margin-bottom-5">
@@ -547,7 +547,7 @@
                     <div class="list-product-description product-description-brd margin-bottom-30">
                         <div class="row">
                             <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../assets/img/venue_images/venue-2.jpg" alt=""></a>
+                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-2.jpg" alt=""></a>
                             </div> 
                             <div class="col-sm-8 product-description">
                                 <div class="overflow-h margin-bottom-5">
@@ -588,7 +588,7 @@
                     <div class="list-product-description product-description-brd margin-bottom-30">
                         <div class="row">
                             <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../assets/img/venue_images/venue-3.jpg" alt=""></a>
+                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-3.jpg" alt=""></a>
                             </div> 
                             <div class="col-sm-8 product-description">
                                 <div class="overflow-h margin-bottom-5">
@@ -629,7 +629,7 @@
                     <div class="list-product-description product-description-brd margin-bottom-30">
                         <div class="row">
                             <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../assets/img/venue_images/venue-4.jpg" alt=""></a>
+                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-4.jpg" alt=""></a>
                             </div> 
                             <div class="col-sm-8 product-description">
                                 <div class="overflow-h margin-bottom-5">
@@ -670,7 +670,7 @@
                     <div class="list-product-description product-description-brd">
                         <div class="row">
                             <div class="col-sm-4">
-                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../assets/img/venue_images/venue-5.jpg" alt=""></a>
+                                <a href="shop-ui-inner.html"><img class="img-responsive sm-margin-bottom-20" src="../resources/assets/img/venue_images/venue-5.jpg" alt=""></a>
                             </div> 
                             <div class="col-sm-8 product-description">
                                 <div class="overflow-h margin-bottom-5">
@@ -775,19 +775,19 @@
 </div><!--/wrapper-->
 
 <!-- JS Global Compulsory -->           
-<script src="assets/plugins/jquery/jquery.min.js"></script>
-<script src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="resources/assets/plugins/jquery/jquery.min.js"></script>
+<script src="resources/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script src="resources/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script src="assets/plugins/back-to-top.js"></script>
-<script src="assets/plugins/smoothScroll.js"></script>
-<script src="assets/plugins/noUiSlider/jquery.nouislider.all.min.js"></script>
-<script src="assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="resources/assets/plugins/back-to-top.js"></script>
+<script src="resources/assets/plugins/smoothScroll.js"></script>
+<script src="resources/assets/plugins/noUiSlider/jquery.nouislider.all.min.js"></script>
+<script src="resources/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- JS Customization -->
-<script src="assets/js/custom.js"></script>
+<script src="resources/assets/js/custom.js"></script>
 <!-- JS Page Level -->           
-<script src="assets/js/shop.app.js"></script>
-<script src="assets/js/plugins/mouse-wheel.js"></script>
+<script src="resources/assets/js/shop.app.js"></script>
+<script src="resources/assets/js/plugins/mouse-wheel.js"></script>
 <script>
     jQuery(document).ready(function() {
         App.init();
@@ -796,12 +796,12 @@
     });
 </script>
 <!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/js/plugins/placeholder-IE-fixes.js"></script>    
+    <script src="resources/assets/plugins/respond.js"></script>
+    <script src="resources/assets/plugins/html5shiv.js"></script>
+    <script src="resources/assets/js/plugins/placeholder-IE-fixes.js"></script>    
 <![endif]-->
 <!--[if lt IE 10]>
-    <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+    <script src="resources/assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
 <![endif]-->
 
 </body>

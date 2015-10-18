@@ -18,26 +18,26 @@
     <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="resources/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/assets/css/style.css">
 
     <!-- CSS Header and Footer -->
-    <link rel="stylesheet" href="assets/css/headers/header-default.css">
-    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+    <link rel="stylesheet" href="resources/assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="resources/assets/css/footers/footer-v1.css">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/animate.css">
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
-    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+    <link rel="stylesheet" href="resources/assets/plugins/animate.css">
+    <link rel="stylesheet" href="resources/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="resources/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="resources/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+    <link rel="stylesheet" href="resources/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
 
     <!-- CSS Page Style -->
-    <link rel="stylesheet" href="assets/css/pages/profile.css">
+    <link rel="stylesheet" href="resources/assets/css/pages/profile.css">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="resources/assets/css/custom.css">
 </head>
 
 <body>
@@ -48,7 +48,7 @@
         <div class="container header-bottom">
             <!-- Logo -->
             <a class="logo" href="index.html">
-                <img src="assets/img/go.png" alt="Logo">
+                <img src="resources/assets/img/go.png" alt="Logo">
             </a>
             <!-- End Logo -->
 
@@ -185,7 +185,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/go.png" alt=""></a>
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="resources/assets/img/go.png" alt=""></a>
                         <p>Welco to Go4Venue we provide a wonderful experince to make your event a memorable one </p>
                         <p></p>
                     </div><!--/col-md-3-->
@@ -301,21 +301,21 @@
 </div><!--/wrapper-->
 
 <!-- JS Global Compulsory -->
-<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-<script type="text/javascript" src="assets/plugins/counter/waypoints.min.js"></script>
-<script type="text/javascript" src="assets/plugins/counter/jquery.counterup.min.js"></script>
-<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/counter/waypoints.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/counter/jquery.counterup.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript" src="resources/assets/js/custom.js"></script>
 <!-- JS Page Level -->
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/plugins/datepicker.js"></script>
+<script type="text/javascript" src="resources/assets/js/app.js"></script>
+<script type="text/javascript" src="resources/assets/js/plugins/datepicker.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
@@ -324,9 +324,9 @@
     });
 </script>
 <!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+    <script src="resources/assets/plugins/respond.js"></script>
+    <script src="resources/assets/plugins/html5shiv.js"></script>
+    <script src="resources/assets/plugins/placeholder-IE-fixes.js"></script>
 <![endif]-->
 
 </body>

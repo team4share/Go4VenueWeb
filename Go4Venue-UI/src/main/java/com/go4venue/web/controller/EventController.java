@@ -3,12 +3,10 @@ package com.go4venue.web.controller;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.go4venue.web.persistence.beans.Event;
 import com.go4venue.web.service.EventService;
@@ -42,8 +40,8 @@ public class EventController {
      * @param event
      * @return
      */
-    @RequestMapping(value = "/createNewEvent1", method = RequestMethod.POST, produces = "text/html")
-    public @ResponseBody String createEvent(@RequestBody Event event) {
+    @RequestMapping(value = "/createNewEvent1", method = RequestMethod.POST)
+    public String createEvent(@RequestBody Event event) {
 	String responsePage = "SeekerDashboard";
 	LOG.info("New event creattion request: ");
 	eventService.createEvent(event);

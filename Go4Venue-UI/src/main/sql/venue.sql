@@ -1,6 +1,6 @@
 /*
 SQLyog Community v11.3 (64 bit)
-MySQL - 5.6.12-log : Database - venue
+MySQL - 5.6.27-log : Database - venue
 *********************************************************************
 */
 
@@ -32,22 +32,47 @@ CREATE TABLE `amenities` (
 DROP TABLE IF EXISTS `city`;
 
 CREATE TABLE `city` (
-  `city_id` int(11) DEFAULT NULL,
-  `city_name` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `city_name` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `city` */
+
+insert  into `city`(`id`,`city_name`) values (1,'Delhi'),(2,'Noida'),(3,'Ghaziabad');
 
 /*Table structure for table `event` */
 
 DROP TABLE IF EXISTS `event`;
 
 CREATE TABLE `event` (
-  `event_id` int(11) DEFAULT NULL,
-  `event_type` varchar(500) DEFAULT NULL
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `occasion_id` int(11) DEFAULT NULL,
+  `bugget_range` text,
+  `guest_count` int(11) DEFAULT NULL,
+  `date` varchar(50) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `is_flexible_date` tinyint(1) DEFAULT NULL,
+  `locality` text,
+  `remarks` text,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `event` */
+
+/*Table structure for table `occasion` */
+
+DROP TABLE IF EXISTS `occasion`;
+
+CREATE TABLE `occasion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `occasion_name` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `occasion` */
+
+insert  into `occasion`(`id`,`occasion_name`) values (1,'Wedding'),(2,'Birthday Party');
 
 /*Table structure for table `property` */
 
@@ -91,11 +116,11 @@ CREATE TABLE `user` (
   `user_type` varchar(15) DEFAULT NULL,
   `contact_number` varchar(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`first_name`,`last_name`,`email`,`password`,`confirm_password`,`user_type`,`contact_number`) values (1,'Rohit ','Kumar','rohit.chhonker@gmail.com','12345','123456','seeker','9650064949'),(10,NULL,NULL,'shubham.git@gmail.com','123456','123456','seeker','9650064949'),(11,'Shubham','Khandelwal',NULL,'123456','123456','seeker','123456'),(12,'Shubham','Khandelwal','shubham.git@gmail.com','123456','123456','seeker','123456'),(13,'Rakesh','Kumar','rakesh@impetus.co.in','123456','123456','owner','23456'),(14,'Rakesh','Kumar','rakesh@impetus.co.in','123456','123456','owner','23456'),(15,'Rakesh','Kumar','rakesh@impetus.co.in','123456','123456','owner','23456'),(16,'Anurag','Arya',NULL,'12365','1234','owner','13456'),(17,'Anurag','Arya',NULL,'12365','1234','owner','13456'),(18,'Anurag','Arya',NULL,'12365','1234','owner','13456'),(19,'Anurag','Arya',NULL,'12365','1234','owner','13456');
+insert  into `user`(`id`,`first_name`,`last_name`,`email`,`password`,`confirm_password`,`user_type`,`contact_number`) values (1,'Rohit ','Kumar','rohit.chhonker@gmail.com','12345','123456','seeker','9650064949'),(10,NULL,NULL,'shubham.git@gmail.com','123456','123456','seeker','9650064949'),(11,'Shubham','Khandelwal',NULL,'123456','123456','seeker','123456'),(12,'Shubham','Khandelwal','shubham.git@gmail.com','123456','123456','seeker','123456'),(13,'Rakesh','Kumar','rakesh@impetus.co.in','123456','123456','owner','23456'),(14,'Rakesh','Kumar','rakesh@impetus.co.in','123456','123456','owner','23456'),(15,'Rakesh','Kumar','rakesh@impetus.co.in','123456','123456','owner','23456'),(16,'Anurag','Arya',NULL,'12365','1234','owner','13456'),(17,'Anurag','Arya',NULL,'12365','1234','owner','13456'),(18,'Anurag','Arya',NULL,'12365','1234','owner','13456'),(19,'Anurag','Arya',NULL,'12365','1234','owner','13456'),(20,'Rakesh','Kumar','rakesh.kumar@gmail.com','123456','123456','seeker','9650064949');
 
 /*Table structure for table `venue` */
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if !IE]><!--> <html lang="en"  ng-app="app"> <!--<![endif]-->
 <head>
     <title>HomePage | Go4Venue</title>
 
@@ -32,7 +32,8 @@
    
     <link rel="stylesheet" href="resources/assets/plugins/fancybox/source/jquery.fancybox.css">
     <link rel="stylesheet" href="resources/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-    
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+     <script src="resources/work/scripts/controllers/SearchController.js"></script>
     <!-- CSS Customization -->
     <link rel="stylesheet" href="resources/assets/css/custom.css">
 </head>
@@ -75,7 +76,7 @@
             <!-- End Topbar v2 -->
         </div>
         <!-- Navbar -->
-        <div class="navbar navbar-default mega-menu" role="navigation">
+        <div class="navbar navbar-default mega-menu" role="navigation" >
             <div class="container container-space">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -164,9 +165,10 @@
     <!--=== End Header v2 ===-->
     <!-- Image Gradient Go4Venue -->
     <div class="interactive-slider-v2">
-        <div class="container">
+        <div class="container" ng-controller = "SearchController">
             <h1>Party| Venue</h1>
-           
+            			
+           				<select ></select>
                         <div class="topbar-buttons">
                             <Select class="btn-u btn-brd btn-brd-hover btn-u-light"><option> Select Occasion</option></Select> 
                             <Select  class="btn-u btn-brd btn-brd-hover btn-u-light"><option> Select Location</option></Select>
@@ -319,7 +321,7 @@
                             </div>
                             </div>
                         <div class="item">
-                            <img src="assets/img/main/dec4.jpg" alt="">
+                            <img src="resources/assets/img/main/dec4.jpg" alt="">
                             <div class="carousel-caption">
                                 <p>Cocktail Courtyard</p>
                             </div>
@@ -498,20 +500,20 @@
 </div><!--/wrapper-->
 
 <!-- JS Global Compulsory -->
-<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-<script type="text/javascript" src="assets/plugins/parallax-slider/js/modernizr.js"></script>
-<script type="text/javascript" src="assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
-<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+<script type="text/javascript" src="resources/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript" src="resources/assets/js/custom.js"></script>
 <!-- JS Page Level -->
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
+<script type="text/javascript" src="resources/assets/js/app.js"></script>
+<script type="text/javascript" src="resources/assets/js/plugins/owl-carousel.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
       	App.init();
@@ -520,9 +522,9 @@
     });
 </script>
 <!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+    <script src="resources/assets/plugins/respond.js"></script>
+    <script src="resources/assets/plugins/html5shiv.js"></script>
+    <script src="resources/assets/plugins/placeholder-IE-fixes.js"></script>
 <![endif]-->
 
 </body>
