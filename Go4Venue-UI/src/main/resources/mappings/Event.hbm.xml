@@ -4,7 +4,13 @@
 <hibernate-mapping>
 	<class name="com.go4venue.web.persistence.beans.Event" table="event" entity-name="event" >
 		<id name="key" type="java.lang.Long" column="id"  />  
-		<property name="eventName" column="event_name" type="java.lang.String"/>
+		<property name="occasionId" column="occasion_id" type="int"/>
+		<property name="buggetRange" column="bugget_range" type="java.lang.String"/>
+		<property name="guestCount" column="guest_count" type="int"/>
+		<property name="date" column="date" type="java.lang.String"/>
+		<property name="cityId" column="city_id" type="int"/>
+		<property name="isFlexibleDate" column="is_flexible_date" type="boolean"/>
+		<property name="locality" column="locality" type="java.lang.String"/>
+		<property name="remarks" column="remarks" type="java.lang.String"/>
 	</class>
-
 </hibernate-mapping>
