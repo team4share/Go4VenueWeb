@@ -20,5 +20,8 @@
 		<mapping resource="mappings/Property.hbm.xml"></mapping>
 		<mapping resource="mappings/VenueURL.hbm.xml"></mapping>
 		<mapping resource="mappings/User.hbm.xml"></mapping>
+		<mapping resource="mappings/Event.hbm.xml"></mapping>
+		<mapping resource="mappings/Occasion.hbm.xml"></mapping>
+		<mapping resource="mappings/Venue.hbm.xml"></mapping>
 	</session-factory>
 </hibernate-configuration>

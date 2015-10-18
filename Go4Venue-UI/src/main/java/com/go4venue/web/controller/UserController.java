@@ -64,6 +64,7 @@ public class UserController {
 		LOG.info("User Login Successful");
 		User user = userService.getUser(loginInfo);
 		responsePage = user.getUserType().equalsIgnoreCase("owner")?"OwnerDashboard":"SeekerDashboard";
+		
 	    } 
 	} catch (Exception e) {
 	    LOG.error("Invalid User");
@@ -81,6 +82,7 @@ public class UserController {
     public @ResponseBody String registerUser(@RequestBody User user) {
 	System.out.println(user.getUserType());
 	String responsePage = "Seeker";
+	
 	LOG.info("Register User of type : " + user.getUserType());
 	userService.saveUser(user);
 	if (("Owner").equalsIgnoreCase(user.getUserType())) {

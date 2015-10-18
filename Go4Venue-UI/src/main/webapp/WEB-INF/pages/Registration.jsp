@@ -4,7 +4,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"  ng-app="app"> <!--<![endif]-->
 <head>
-    <title>Registration Page | GO4Venue</title>
+    <title>Registration Page | Go4Venue</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
