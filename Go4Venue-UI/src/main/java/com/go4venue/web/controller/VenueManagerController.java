@@ -35,8 +35,8 @@ public class VenueManagerController {
      */
     @RequestMapping(value = "/listVenues", method = RequestMethod.POST)
     public String listVenues(@ModelAttribute VenueSearchInfo venueSearchInfo, ModelMap model) {
-	LOG.info(venueSearchInfo.getLocationId() + "  " + venueSearchInfo.getOccasionId());
-	model.put("venueList", venueListingService.getVenueListing(venueSearchInfo));
+			LOG.info(venueSearchInfo.getLocationId() + "  " + venueSearchInfo.getOccasionId());
+			model.put("venueList", venueListingService.getVenueListing(venueSearchInfo));
 	return "VenueListing";
     }
 

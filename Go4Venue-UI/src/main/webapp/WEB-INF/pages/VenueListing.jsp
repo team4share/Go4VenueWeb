@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
@@ -503,6 +504,9 @@
                 </div><!--/end result category-->
 
                 <div class="filter-results">
+                <c:forEach var="venueData" items="${venueList}">
+                    
+                
                     <div class="list-product-description product-description-brd margin-bottom-30">
                         <div class="row">
                             <div class="col-sm-4">
@@ -512,7 +516,7 @@
                                 <div class="overflow-h margin-bottom-5">
                                     <ul class="list-inline overflow-h">
                                         <li><h4 class="title-price"><a href="shop-ui-inner.html">Venue1</a></h4></li>
-                                        <li><span class="gender text-uppercase">The ABC Villa</span></li>
+                                        <li><span class="gender text-uppercase">${venueData.venueName}</span></li>
                                         <li class="pull-right">
                                             <ul class="list-inline product-ratings">
                                                 <li><i class="rating-selected fa fa-star"></i></li>
@@ -544,7 +548,7 @@
                         </div>
                     </div>    
 
-                   
+                   </c:forEach>
 
 
                 </div><!--/end filter resilts-->
