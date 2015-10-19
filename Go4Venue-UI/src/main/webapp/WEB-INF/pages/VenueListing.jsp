@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="resources/assets/plugins/noUiSlider/jquery.nouislider.min.css">
     <link rel="stylesheet" href="resources/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
     
-    <!-- Style Switcher -->
+     <!-- Style Switcher -->
     <link rel="stylesheet" href="resources/assets/css/plugins/style-switcher.css"> 
 
     <!-- CSS Theme -->
@@ -505,6 +505,8 @@
 
                 <div class="filter-results">
                 <c:forEach var="venueData" items="${venueList}">
+                    
+                
                     <div class="list-product-description product-description-brd margin-bottom-30">
                         <div class="row">
                             <div class="col-sm-4">
@@ -545,7 +547,10 @@
                             </div>
                         </div>
                     </div>    
+
                    </c:forEach>
+
+
                 </div><!--/end filter resilts-->
 
                 <div class="text-center">
