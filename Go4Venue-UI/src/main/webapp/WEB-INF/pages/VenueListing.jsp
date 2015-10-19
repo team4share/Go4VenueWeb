@@ -505,8 +505,6 @@
 
                 <div class="filter-results">
                 <c:forEach var="venueData" items="${venueList}">
-                    
-                
                     <div class="list-product-description product-description-brd margin-bottom-30">
                         <div class="row">
                             <div class="col-sm-4">
@@ -547,10 +545,7 @@
                             </div>
                         </div>
                     </div>    
-
                    </c:forEach>
-
-
                 </div><!--/end filter resilts-->
 
                 <div class="text-center">
