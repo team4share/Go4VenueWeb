@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.go4venue.web.persistence.beans.PageInfo" table="page_info" entity-name="pageInfo" >
+		<id name="key" type="java.lang.Long" column="id"  />  
+		<property name="url" column="url" type="java.lang.String"/>
+		<property name="title" column="title" type="java.lang.String"/>
+	</class>
+
+</hibernate-mapping>
