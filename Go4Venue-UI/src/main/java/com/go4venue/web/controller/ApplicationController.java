@@ -34,7 +34,10 @@ public class ApplicationController {
 	LOG.info("home page of the site was requested.");
 	//model.addAttribute("name", "Project Starts From Here..");
 	VenueSearchInfo venueSearchInfo = new VenueSearchInfo();
+	
 	model.put("venueSearchInfo",venueSearchInfo);
+	model.put("occasions", applicationService.getOccasions());
+	model.put("cities", applicationService.getCities());
 	String homePage = "Index";
 	return homePage;
     }

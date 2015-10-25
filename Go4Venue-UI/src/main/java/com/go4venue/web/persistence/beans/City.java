@@ -1,16 +1,8 @@
 package com.go4venue.web.persistence.beans;
 
-import java.io.Serializable;
-
-public class Occasion implements Serializable{
-    
-    /**
-     * 
-     */
-    private static final long serialVersionUID = 1L;
+public class City {
     private long key;
     private String name;
-    
     /**
      * @return the key
      */
@@ -35,5 +27,4 @@ public class Occasion implements Serializable{
     public void setName(String name) {
 	this.name = name;
     }
-
 }

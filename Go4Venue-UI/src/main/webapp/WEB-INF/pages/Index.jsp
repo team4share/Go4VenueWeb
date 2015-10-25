@@ -1,4 +1,6 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
+
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"  ng-app="app"> <!--<![endif]-->
@@ -164,21 +166,22 @@
     </div>
     <!--=== End Header v2 ===-->
     <!-- Image Gradient Go4Venue -->
-    
-    <div class="interactive-slider-v2">
+		 
+
+		<div class="interactive-slider-v2">
         <div class="container" ng-controller = "SearchController">
             <h1>Party| Venue</h1>
             			
            			<form action="listVenues" id="searchVenue" name = "venueSearchForm" method="post" modelAttribute="venueSearchInfo">
                         <div class="topbar-buttons">
-                            <Select class="btn-u btn-brd btn-brd-hover btn-u-light" name = "occasionId">
-                            	<option value = "O1"> Wedding</option>
-                            	<option value ="O2"> Birthday Party</option>
-                            </Select> 
-                            
-                            <Select  class="btn-u btn-brd btn-brd-hover btn-u-light" name = "locationId">
-                                <option value = "E1">Delhi/NCR</option>
-                                <option value = "E2">Bangalore</option>
+                            <select  class="btn-u btn-brd btn-brd-hover btn-u-light" name = "occasionId">
+							<c:forEach var="occasion" items="${occasions}">
+								<option value="${occasion.key}">${occasion.name}</option>
+							</c:forEach>
+						</select> <Select  class="btn-u btn-brd btn-brd-hover btn-u-light" name = "locationId">
+                               <c:forEach var="city" items="${cities}">
+								<option value="${city.key}">${city.name}</option>
+							</c:forEach>
                             </Select>
                             <button type = "submit" class=" glyphicon glyphicon-search btn-u btn-brd btn-brd-hover btn-u-light"> Search</button>
                             
