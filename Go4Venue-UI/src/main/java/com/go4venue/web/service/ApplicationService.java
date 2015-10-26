@@ -6,6 +6,7 @@ import com.go4venue.web.persistence.beans.City;
 import com.go4venue.web.persistence.beans.Occasion;
 
 public interface ApplicationService {
+    
     public void getPropertyByName(String name);
 
     public void saveImages();
