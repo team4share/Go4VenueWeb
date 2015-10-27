@@ -14,4 +14,8 @@ import com.go4venue.web.persistence.beans.VenueRaw;
  */
 public interface VenueManagerDao {
     	public List<VenueRaw> geVenueData(VenueSearchInfo venueSearchInfo);
+    	public List<Locality> getLocalities(int cityId);
+    	public List<Amenities> getAmenities();
+    	public List<String> getExpectedGuestsRange();
+    	public List<VenueType> getVenueType();
 }
