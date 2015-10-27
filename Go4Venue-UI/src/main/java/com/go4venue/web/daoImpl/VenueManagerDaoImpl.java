@@ -34,5 +34,14 @@ public class VenueManagerDaoImpl extends CommonDBDao implements VenueManagerDao 
 	return venues!=null && venues.size()>0 ?venues :null;
 	//return null;
     }
-
+    @Override
+    public List<Amenities> getAmenities() {
+    	String query = "select * from amenities";
+	SQLQuery amenitiesMappedQuery =  getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("amenities");
+	List<Amenities>amenities = amenitiesMappedQuery.list();
+	return amenities!=null && amenities.size()>0 ?amenities :null;
+	//return null;
+    }
+    	public List<String> getExpectedGuestsRange();
+    	public List<VenueType> getVenueType();
 }
