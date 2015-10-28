@@ -28,3 +28,21 @@ margin: 0px auto;
 {
 margin: 40px auto;
 }
+
+/*user profile header css changes magin changed betwwen header container & it's bottom*/
+.header >.header-bottom {
+	display: table;
+	margin-bottom: -10px;
+}
+
+
+
+/* Style for making faded background for search elements*/
+.Search-background {
+	left: 0;
+	right: 0;
+	bottom: -2px;
+	padding: 12px 0;
+	position: absolute;
+	background: rgba(0,0,0,0.7);
+}
