@@ -204,7 +204,7 @@
 								<option value="${city.key}">${city.name}</option>
 							</c:forEach>
                             </Select>
-                            <button type = "submit" class=" glyphicon glyphicon-search btn-u btn-brd btn-brd-hover btn-u-light"> Search</button>
+                            <button type = "submit" class=" glyphicon glyphicon-search .btn-u-search.btn-brd-search btn-u btn-brd btn-brd-hover btn-u-light"> Search</button>
                             
                        
                     </form>
