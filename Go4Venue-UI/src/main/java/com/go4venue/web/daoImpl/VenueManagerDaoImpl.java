@@ -57,6 +57,7 @@ public class VenueManagerDaoImpl extends CommonDBDao implements VenueManagerDao 
    public List<VenueType> getVenueType() {
    	String query = "select * from venue_type";
 	SQLQuery venueTypeMappedQuery =  getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("venueType");
+
 	List<VenueType>venueTypes = venueTypeMappedQuery.list();
 	return venueTypes!=null && venueTypes.size()>0 ?venueTypes :null;	 
    }
@@ -65,4 +66,8 @@ public List<Locality> getLocalities(int cityId) {
     // TODO Auto-generated method stub
     return null;
 }
+
+	//List<VenueType>venueTypes = guestMappedQuery.list();
+	//return venueTypes!=null && venueTypes.size()>0 ?venueTypes :null;	 
+   //}
 }
