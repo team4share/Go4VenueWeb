@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!--[if !IE]><!--> <html lang="en" ng-app="venueListing"> <!--<![endif]-->  
 <head>
-    <title>Product List | Unify - Responsive Website Template</title>
+    <title>${title}</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -20,7 +20,6 @@
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="resources/assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="resources/assets/css/shop.style.css">
     
     <!-- CSS Header and Footer -->
     <link rel="stylesheet" href="resources/assets/css/headers/header-v5.css">
@@ -30,8 +29,6 @@
     <link rel="stylesheet" href="resources/assets/plugins/animate.css">    
     <link rel="stylesheet" href="resources/assets/plugins/line-icons/line-icons.css">
     <link rel="stylesheet" href="resources/assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="resources/assets/plugins/noUiSlider/jquery.nouislider.min.css">
-    <link rel="stylesheet" href="resources/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
     
      <!-- Style Switcher -->
     <link rel="stylesheet" href="resources/assets/css/plugins/style-switcher.css"> 
@@ -41,10 +38,30 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="resources/assets/css/custom.css">
+    
+<!-- JS Global Compulsory -->           
+<script src="resources/assets/plugins/jquery/jquery.min.js"></script>
+<script src="resources/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script src="resources/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script>
+var venues = '${venueList}';
+
+
+function getVenues() {
+	return JSON.parse(venues);
+}
+</script>
+    
+    
+    
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="resources/work/scripts/controllers/VenueListingController.js"></script>
 </head> 
 
 <body class="header-fixed">
-<div class="wrapper">
+<div class="wrapper" ng-controller="VenueListingController">
     <!--=== Header v5 ===-->   
     <div class="header-v5 header-static">
         <!-- Topbar v3 -->
@@ -122,7 +139,7 @@
                             <span class="badge badge-sea rounded-x">3</span>
                             <ul class="list-unstyled badge-open mCustomScrollbar" data-mcs-theme="minimal-dark">
                                 <li>
-                                    <img src="resources/assets/img/thumb/venue-1-thumb.jpg" alt="">
+                                    
                                     <button type="button" class="close">×</button>
                                     <div class="overflow-h">
                                         <span>Venue 1</span>
@@ -130,7 +147,7 @@
                                     </div>    
                                 </li>
                                 <li>
-                                    <img src="resources/assets/img/thumb/venue-2-thumb.jpg" alt="">
+                                   
                                     <button type="button" class="close">×</button>
                                     <div class="overflow-h">
                                         <span>Venue 2</span>
@@ -138,7 +155,7 @@
                                     </div>    
                                 </li>
                                 <li>
-                                    <img src="resources/assets/img/thumb/venue-3-thumb.jpg" alt="">
+                                    
                                     <button type="button" class="close">×</button>
                                     <div class="overflow-h">
                                         <span>Venue 3</span>
@@ -232,33 +249,34 @@
                                 <ul class="list-unstyled checkbox-list">
                                     <li>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="checkbox" checked />
+                                        <input type="text" ng-model="Cusine" />
+                                            <input type="checkbox" value="Indian" name="checkbox" ng-model="Cusine1"/>
                                             <i></i>
-                                            New Delhi
+                                            	Indian
                                             <small><a href="#">(23)</a></small>
                                         </label>
                                     </li>
                                     <li>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="checkbox" checked />
+                                            <input type="checkbox" value="Indian,Chinese" name="checkbox1" ng-model="Cusine"/>
                                             <i></i>
-                                            Gurgaon
+                                           Chinese
                                             <small><a href="#">(4)</a></small>
                                         </label>
                                     </li>
                                     <li>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="checkbox" />
+                                            <input type="checkbox" value="Continental" Chinesename="checkbox2" ng-model="Cusine3"/>
                                             <i></i>
-                                            Noida
+                                            Continental
                                             <small><a href="#">(11)</a></small>
                                         </label>
                                     </li>
                                     <li>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="checkbox" />
+                                            <input type="checkbox" value="Mediterranean" name="checkbox3" ng-model="Cusine4"/>
                                             <i></i>
-                                            Ghaziabad
+                                            Mediterranean
                                             <small><a href="#">(3)</a></small>
                                         </label>
                                     </li>
@@ -420,9 +438,7 @@
                                     <li><input type="checkbox" name="checkbox" checked />
                                             <i class="fa fa-video-camera"></i> Projector</li>
                                     <li><input type="checkbox" name="checkbox" checked />
-                                            <i class="fa fa-lock"></i> Safety Room</li>
-                                    
-                                    
+                                            <i class="fa fa-lock"></i> Safety Room</li>                                    
                                 </ul>
                             </div>
                         </div>
@@ -503,9 +519,12 @@
                     </div>    
                 </div><!--/end result category-->
 
+ 				<div ng-repeat="venueData in venues | filter :Cusine">
+                	{{venueData.venueCusines}}
+                </div>
                 <div class="filter-results">
-                <c:forEach var="venueData" items="${venueList}">
-                    
+                   
+                 
                 
                     <div class="list-product-description product-description-brd margin-bottom-30">
                         <div class="row">
@@ -516,7 +535,7 @@
                                 <div class="overflow-h margin-bottom-5">
                                     <ul class="list-inline overflow-h">
                                         <li><h4 class="title-price"><a href="shop-ui-inner.html">Venue1</a></h4></li>
-                                        <li><span class="gender text-uppercase">${venueData.venueName}</span></li>
+                                        <li><span class="gender text-uppercase">{{venueData.venueName}}</span></li>
                                         <li class="pull-right">
                                             <ul class="list-inline product-ratings">
                                                 <li><i class="rating-selected fa fa-star"></i></li>
@@ -548,7 +567,7 @@
                         </div>
                     </div>    
 
-                   </c:forEach>
+                   
 
 
                 </div><!--/end filter resilts-->
@@ -617,28 +636,6 @@
     </div>
     <!--=== End Footer v4 ===-->
 </div><!--/wrapper-->
-
-<!-- JS Global Compulsory -->           
-<script src="resources/assets/plugins/jquery/jquery.min.js"></script>
-<script src="resources/assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script src="resources/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<!-- JS Implementing Plugins -->
-<script src="resources/assets/plugins/back-to-top.js"></script>
-<script src="resources/assets/plugins/smoothScroll.js"></script>
-<script src="resources/assets/plugins/noUiSlider/jquery.nouislider.all.min.js"></script>
-<script src="resources/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<!-- JS Customization -->
-<script src="resources/assets/js/custom.js"></script>
-<!-- JS Page Level -->           
-<script src="resources/assets/js/shop.app.js"></script>
-<script src="resources/assets/js/plugins/mouse-wheel.js"></script>
-<script>
-    jQuery(document).ready(function() {
-        App.init();
-        App.initScrollBar();        
-        MouseWheel.initMouseWheel();     
-    });
-</script>
 <!--[if lt IE 9]>
     <script src="resources/assets/plugins/respond.js"></script>
     <script src="resources/assets/plugins/html5shiv.js"></script>

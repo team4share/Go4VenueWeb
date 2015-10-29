@@ -11,4 +11,6 @@ public interface ApplicationDao {
 
     public List<City> getCities();
 
+    public String getPageTitle(String title);
+
 }

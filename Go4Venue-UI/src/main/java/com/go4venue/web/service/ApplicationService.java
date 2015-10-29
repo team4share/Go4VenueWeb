@@ -14,4 +14,6 @@ public interface ApplicationService {
     public List<Occasion> getOccasions();
 
     public List<City> getCities();
+
+    public String getPageTitle(String string);
 }

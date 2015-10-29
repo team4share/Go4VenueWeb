@@ -4,6 +4,6 @@
 <hibernate-mapping>
 	<class name="com.go4venue.web.persistence.beans.City" table="city" entity-name="city" >
 		<id name="key" type="java.lang.Long" column="id"  />  
-		<property name="name" column="occasion_name" type="java.lang.String"/>
+		<property name="name" column="city_name" type="java.lang.String"/>
 	</class>
 </hibernate-mapping>

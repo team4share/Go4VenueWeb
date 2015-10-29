@@ -29,4 +29,12 @@ public class ApplicationDaoImpl extends CommonDBDao implements ApplicationDao {
 	List<City>cities = getSessionFactory().openSession().createSQLQuery(query).addEntity("city").list();
 	return cities;
     }
+
+    @Override
+    public String getPageTitle(String title) {
+	String query = "select title from page_info where url = '"+title+"'";
+	@SuppressWarnings("unchecked")
+	List<String> titles = getSessionFactory().openSession().createSQLQuery(query).list();
+	return (String) titles.get(0);
+    }
 }

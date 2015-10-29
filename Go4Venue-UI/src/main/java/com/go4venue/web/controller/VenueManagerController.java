@@ -3,6 +3,9 @@
  */
 package com.go4venue.web.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,7 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.go4venue.web.core.beans.VenueSearchInfo;
+import com.go4venue.web.persistence.beans.VenueRaw;
+import com.go4venue.web.service.ApplicationService;
 import com.go4venue.web.service.VenueListingService;
+import com.google.gson.Gson;
 
 /**
  * @date 18 Ovt 2015
@@ -27,6 +33,8 @@ public class VenueManagerController {
 
     @Autowired
     private VenueListingService venueListingService;
+    @Autowired
+    private ApplicationService applicationService;
 
     /**
      * 
@@ -35,9 +43,22 @@ public class VenueManagerController {
      */
     @RequestMapping(value = "/listVenues", method = RequestMethod.POST)
     public String listVenues(@ModelAttribute VenueSearchInfo venueSearchInfo, ModelMap model) {
-			LOG.info(venueSearchInfo.getLocationId() + "  " + venueSearchInfo.getOccasionId());
-			model.put("venueList", venueListingService.getVenueListing(venueSearchInfo));
+	LOG.info(venueSearchInfo.getLocationId() + "  " + venueSearchInfo.getOccasionId());
+	List<VenueRaw> venues = venueListingService.getVenueListing(venueSearchInfo);
+	List<VenueRaw> venuesList = new ArrayList<>();
+	for (VenueRaw venueRaw : venues) {
+	    venueRaw.setVenueName(venueRaw.getVenueName().replace("http://www.venuelook.com/", ""));
+	    venueRaw.setVenueUrl(venueRaw.getVenueUrl().replace("http://www.venuelook.com/", ""));
+	    venueRaw.setVenueDescription("");
+	    venuesList.add(venueRaw);
+	}
+	Gson gson = new Gson();
+	ArrayList jsonList = new ArrayList();
+	model.put("venueList", gson.toJson(venuesList));
+	model.put("title", applicationService.getPageTitle("/listVenues"));
+	model.put("cities",applicationService.getCities());
+	//model.put("amenites", )
+	System.out.println(gson.toJson(venuesList));
 	return "VenueListing";
     }
-
 }

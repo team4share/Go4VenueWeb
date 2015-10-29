@@ -36,5 +36,10 @@ public class ApplicationServiceImpl implements ApplicationService {
     public List<City> getCities() {
 	return applicationDao.getCities();
     }
+    @Override
+    public String getPageTitle(String title) {
+	
+	return applicationDao.getPageTitle(title);
+    }
 
 }
