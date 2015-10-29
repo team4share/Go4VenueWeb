@@ -6,6 +6,7 @@ package com.go4venue.web.service;
 import java.util.List;
 
 import com.go4venue.web.core.beans.VenueSearchInfo;
+import com.go4venue.web.persistence.beans.Amenities;
 import com.go4venue.web.persistence.beans.VenueRaw;
 
 /**
@@ -16,4 +17,6 @@ import com.go4venue.web.persistence.beans.VenueRaw;
  */
 public interface VenueListingService {
     public List<VenueRaw> getVenueListing(VenueSearchInfo venueSearchInfo);
+
+    public List<String> getAmenities();
 }

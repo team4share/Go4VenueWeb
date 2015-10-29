@@ -46,8 +46,6 @@
 <!-- JS Implementing Plugins -->
 <script>
 var venues = '${venueList}';
-
-
 function getVenues() {
 	return JSON.parse(venues);
 }

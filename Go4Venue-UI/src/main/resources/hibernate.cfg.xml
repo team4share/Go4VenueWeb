@@ -27,5 +27,6 @@
 		<mapping resource="mappings/City.hbm.xml"></mapping>
 		<mapping resource="mappings/PageInfo.hbm.xml"></mapping>
 		<mapping resource="mappings/Locality.hbm.xml"></mapping>
+		<mapping resource="mappings/Amenities.hbm.xml"></mapping>
 	</session-factory>
 </hibernate-configuration>

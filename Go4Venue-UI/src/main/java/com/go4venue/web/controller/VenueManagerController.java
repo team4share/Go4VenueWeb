@@ -57,6 +57,7 @@ public class VenueManagerController {
 	model.put("venueList", gson.toJson(venuesList));
 	model.put("title", applicationService.getPageTitle("/listVenues"));
 	model.put("cities",applicationService.getCities());
+	model.put("amenities",venueListingService.getAmenities());
 	//model.put("amenites", )
 	System.out.println(gson.toJson(venuesList));
 	return "VenueListing";

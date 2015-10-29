@@ -2,6 +2,7 @@ package com.go4venue.web.service;
 
 import java.util.List;
 
+import com.go4venue.web.persistence.beans.Amenities;
 import com.go4venue.web.persistence.beans.City;
 import com.go4venue.web.persistence.beans.Occasion;
 
@@ -16,4 +17,6 @@ public interface ApplicationService {
     public List<City> getCities();
 
     public String getPageTitle(String string);
+
+   
 }

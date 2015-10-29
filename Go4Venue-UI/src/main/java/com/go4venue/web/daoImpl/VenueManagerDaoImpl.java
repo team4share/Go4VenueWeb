@@ -12,7 +12,11 @@ import org.springframework.stereotype.Repository;
 
 import com.go4venue.web.core.beans.VenueSearchInfo;
 import com.go4venue.web.dao.VenueManagerDao;
+import com.go4venue.web.persistence.beans.Amenities;
+import com.go4venue.web.persistence.beans.GuestRange;
+import com.go4venue.web.persistence.beans.Locality;
 import com.go4venue.web.persistence.beans.VenueRaw;
+import com.go4venue.web.persistence.beans.VenueType;
 
 /**
  * @author Rohit Chhonker
@@ -53,7 +57,12 @@ public class VenueManagerDaoImpl extends CommonDBDao implements VenueManagerDao 
    public List<VenueType> getVenueType() {
    	String query = "select * from venue_type";
 	SQLQuery venueTypeMappedQuery =  getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("venueType");
-	List<VenueType>venueTypes = guestMappedQuery.list();
+	List<VenueType>venueTypes = venueTypeMappedQuery.list();
 	return venueTypes!=null && venueTypes.size()>0 ?venueTypes :null;	 
    }
+@Override
+public List<Locality> getLocalities(int cityId) {
+    // TODO Auto-generated method stub
+    return null;
+}
 }
