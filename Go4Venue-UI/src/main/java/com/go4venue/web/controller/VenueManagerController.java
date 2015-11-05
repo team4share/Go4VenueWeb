@@ -52,13 +52,17 @@ public class VenueManagerController {
 	    venueRaw.setVenueDescription("");
 	    venuesList.add(venueRaw);
 	}
+	System.out.println(venueListingService.getAmenities());
+	
 	Gson gson = new Gson();
-	ArrayList jsonList = new ArrayList();
+	
 	model.put("venueList", gson.toJson(venuesList));
 	model.put("title", applicationService.getPageTitle("/listVenues"));
-	model.put("cities",applicationService.getCities());
-	model.put("amenities",venueListingService.getAmenities());
-	//model.put("amenites", )
+	model.put("cities",gson.toJson(applicationService.getCities()));
+	model.put("occasions",gson.toJson(applicationService.getOccasions()));
+	model.put("amenities",gson.toJson(venueListingService.getAmenities()));
+	model.put("venueTypes",gson.toJson(venueListingService.getVenueTypes()));
+	
 	System.out.println(gson.toJson(venuesList));
 	return "VenueListing";
     }

@@ -25,49 +25,46 @@ import com.go4venue.web.persistence.beans.VenueType;
 
 @Transactional
 @Repository
-
+@SuppressWarnings("unchecked")
 public class VenueManagerDaoImpl extends CommonDBDao implements VenueManagerDao {
 
     @Override
     public List<VenueRaw> geVenueData(VenueSearchInfo venueSearchInfo) {
 	String query = "select * from venue_raw";
-	SQLQuery venueMappedQuery =  getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("VenueRaw");
-	//@SuppressWarnings("unchecked")
-	List<VenueRaw>venues = venueMappedQuery.list();
-	//System.out.println(venueMappedQuery.list().size());
-	return venues!=null && venues.size()>0 ?venues :null;
-	//return null;
+	SQLQuery venueMappedQuery = getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("VenueRaw");
+	List<VenueRaw> venues = venueMappedQuery.list();
+	return venues != null && venues.size() > 0 ? venues : null;
     }
+
     @Override
     public List<Amenities> getAmenities() {
-    	String query = "select * from amenities";
-	SQLQuery amenitiesMappedQuery =  getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("amenities");
-	List<Amenities>amenities = amenitiesMappedQuery.list();
-	return amenities!=null && amenities.size()>0 ?amenities :null;
-	//return null;
+	String query = "select * from amenities";
+	SQLQuery amenitiesMappedQuery = getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("amenities");
+	List<Amenities> amenities = amenitiesMappedQuery.list();
+	System.out.println(amenities.size());
+	return amenities != null && amenities.size() > 0 ? amenities : null;
+	// return null;
     }
-   @Override
-   public List<GuestRange> getExpectedGuestsRange() {
+
+    @Override
+    public List<GuestRange> getExpectedGuestsRange() {
 	String query = "select * from guest_range";
-	SQLQuery guestMappedQuery =  getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("guestRange");
-	List<GuestRange>guestRange = guestMappedQuery.list();
-	return guestRange!=null && guestRange.size()>0 ?guestRange :null;	    
-   }
-   @Override
-   public List<VenueType> getVenueType() {
-   	String query = "select * from venue_type";
-	SQLQuery venueTypeMappedQuery =  getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("venueType");
+	SQLQuery guestMappedQuery = getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("guestRange");
+	List<GuestRange> guestRange = guestMappedQuery.list();
+	return guestRange != null && guestRange.size() > 0 ? guestRange : null;
+    }
 
-	List<VenueType>venueTypes = venueTypeMappedQuery.list();
-	return venueTypes!=null && venueTypes.size()>0 ?venueTypes :null;	 
-   }
-@Override
-public List<Locality> getLocalities(int cityId) {
-    // TODO Auto-generated method stub
-    return null;
-}
+    @Override
+    public List<VenueType> getVenueTypes() {
+	String query = "select * from venue_type";
+	SQLQuery venueTypeMappedQuery = getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("venueType");
+	List<VenueType> venueTypes = venueTypeMappedQuery.list();
+	return venueTypes != null && venueTypes.size() > 0 ? venueTypes : null;
+    }
 
-	//List<VenueType>venueTypes = guestMappedQuery.list();
-	//return venueTypes!=null && venueTypes.size()>0 ?venueTypes :null;	 
-   //}
+    @Override
+    public List<Locality> getLocalities(int cityId) {
+	// TODO Auto-generated method stub
+	return null;
+    }
 }

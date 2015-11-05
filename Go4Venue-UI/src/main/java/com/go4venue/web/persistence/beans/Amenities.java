@@ -6,6 +6,7 @@ public class Amenities implements Serializable {
     private static final long serialVersionUID = 1L;
     private long key;
     private String name;
+    private String css;
     public long getKey() {
 	return key;
     }
@@ -17,6 +18,18 @@ public class Amenities implements Serializable {
     }
     public void setName(String name) {
 	this.name = name;
+    }
+    /**
+     * @return the css
+     */
+    public String getCss() {
+	return css;
+    }
+    /**
+     * @param css the css to set
+     */
+    public void setCss(String css) {
+	this.css = css;
     }
 
 }

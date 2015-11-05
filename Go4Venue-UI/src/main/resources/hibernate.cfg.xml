@@ -15,7 +15,6 @@
 		<!-- <property name="hbm2ddl.auto">create</property> -->
 		<!-- <property name="hbm2ddl.import_files">/all_dml.sql</property> -->
 		<!-- <property name="hbm2ddl.import_files_sql_extractor">org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor</property> --> 
-		
 		<!-- Tables -->
 		<mapping resource="mappings/Property.hbm.xml"></mapping>
 		<mapping resource="mappings/VenueURL.hbm.xml"></mapping>
@@ -28,5 +27,6 @@
 		<mapping resource="mappings/PageInfo.hbm.xml"></mapping>
 		<mapping resource="mappings/Locality.hbm.xml"></mapping>
 		<mapping resource="mappings/Amenities.hbm.xml"></mapping>
+		<mapping resource="mappings/VenueType.hbm.xml"></mapping>
 	</session-factory>
 </hibernate-configuration>

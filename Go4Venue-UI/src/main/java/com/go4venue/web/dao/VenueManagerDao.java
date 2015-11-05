@@ -21,5 +21,5 @@ public interface VenueManagerDao {
     	public List<Locality> getLocalities(int cityId);
     	public List<Amenities> getAmenities();
     	public List<GuestRange> getExpectedGuestsRange();
-    	public List<VenueType> getVenueType();
+    	public List<VenueType> getVenueTypes();
 }

@@ -157,13 +157,10 @@
                         <li class="">
                             &nbsp; &nbsp;
                             </li>
-<<<<<<< HEAD
+
                                                
                          <!-- End Blog -->
-=======
-                        
-                        <!-- End Blog -->
->>>>>>> branch 'master' of https://github.com/team4share/Go4VenueWeb.git
+
 
                         <!-- Portfolio -->
                        <li class="">
@@ -231,13 +228,7 @@
         			</div>
         		</div>
         	</div>
-           
-        		  
-<<<<<<< HEAD
-       
-=======
-        
->>>>>>> branch 'master' of https://github.com/team4share/Go4VenueWeb.git
+
         	<div class="col-md-4">
         		<div class="service">
                     <i class="fa fa-hand-o-up service-icon"></i>

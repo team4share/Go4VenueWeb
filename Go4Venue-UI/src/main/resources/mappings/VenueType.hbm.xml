@@ -2,8 +2,8 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.go4venue.web.persistence.beans.VenueType" table="venue_type" entity-name="VenueType" >
+	<class name="com.go4venue.web.persistence.beans.VenueType" table="venue_type" entity-name="venueType" >
 		<id name="key" type="java.lang.Long" column="id"  />  
-		<property name="type" column="type" type="java.lang.Stringt"/>
+		<property name="type" column="type" type="java.lang.String"/>
 	</class>
 </hibernate-mapping>
