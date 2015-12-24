@@ -9,6 +9,7 @@ import com.go4venue.web.core.beans.VenueSearchInfo;
 import com.go4venue.web.persistence.beans.Amenities;
 import com.go4venue.web.persistence.beans.GuestRange;
 import com.go4venue.web.persistence.beans.Locality;
+import com.go4venue.web.persistence.beans.Venue;
 import com.go4venue.web.persistence.beans.VenueRaw;
 import com.go4venue.web.persistence.beans.VenueType;
 
@@ -18,8 +19,10 @@ import com.go4venue.web.persistence.beans.VenueType;
  */
 public interface VenueManagerDao {
     	public List<VenueRaw> geVenueData(VenueSearchInfo venueSearchInfo);
-    	public List<Locality> getLocalities(int cityId);
+    	public List<Locality> getLocalities(long cityId);
     	public List<Amenities> getAmenities();
     	public List<GuestRange> getExpectedGuestsRange();
     	public List<VenueType> getVenueTypes();
+    	public Venue getVenueById(long id);
+	List<String> getVenueImages(long venueId);
 }

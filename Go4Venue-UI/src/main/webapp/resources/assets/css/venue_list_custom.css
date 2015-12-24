@@ -1,0 +1,42 @@
+/* Add here all your css styles (customizations) */
+.shop-bg-purple_go {
+  background: #9B6BCC;
+}
+
+.slider-snap-text span:after {
+	left: 0;
+	top: -1px;
+	content: none;
+	position: absolute;
+}
+
+.breadcrumbs-v4 {
+  width: 100%;
+  padding: 25px 0;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/breadc2.jpg);
+}
+
+.font-purple
+{   text-decoration-color:#8553B9
+}
+
+select.citySelect {
+    width:200px;
+}
+.locality
+{
+
+    overflow-y: scroll;
+}
+.checkbox-list .checkbox {
+	color: #999;
+	margin: 4px 0;
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 25px;
+	padding-left: 27px;
+}

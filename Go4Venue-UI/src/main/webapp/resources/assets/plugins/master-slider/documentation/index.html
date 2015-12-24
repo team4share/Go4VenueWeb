@@ -75,9 +75,6 @@
 							<a href="#views">Slide Changing Transitions</a>
 						</li>
 						<li>
-							<a href="#filters">Adding CSS3 Filters</a>
-						</li>
-						<li>
 							<a href="#api">Slider API</a>
 						</li>
 						<li>
@@ -108,7 +105,7 @@
 				</nav>
 				<div class="update-cont">
 					<p class="cpr">
-						Version 2.12.3, Last update: 4/14/2015
+						Version 2.9.0, Last update: 12/13/2014
 						<br/>
 						&copy; <a href="http://www.averta.net/" target="_blank">Averta Ltd.</a> All rights reserved.
 					</p>
@@ -296,11 +293,6 @@
 								<td>Enables mouse scroll wheel navigation.</td>
 							</tr>
 							<tr>
-								<td>keyboard</td>
-								<td>false</td>
-								<td>Enables keyboard navigation.</td>
-							</tr>
-							<tr>
 								<td>autoplay</td>
 								<td>false</td>
 								<td>Enables the autoplay slideshow.</td>
@@ -416,11 +408,6 @@
 								</td>
 							</tr>
 							<tr>
-								<td>filters</td>
-								<td>null</td>
-								<td>Applys CSS3 filters to slide transition views. For more information check <a href="#filters"> Adding CSS3 filters.</a></td>
-							</tr>
-							<tr>
 								<td>hideLayers</td>
 								<td>false</td>
 								<td>Whether the slider hides all layers before changing slide. </td>
@@ -449,11 +436,6 @@
 								<td>deepLinkType</td>
 								<td>"path"</td>
 								<td>Specifies the type of displaying slider deeplinking permalink in the address bar. acceptable values: "paht" and "query"</td>
-							</tr>
-							<tr>
-								<td>startOnAppear</td>
-								<td>false</td>
-								<td>It initializes slider when slider comes inside of browser window when scrolling.</td>
 							</tr>
 						</tbody>
 					</table>
@@ -640,38 +622,6 @@
 					</p>
 					<hr/>
 				</article>
-				<article class="content-section" id="filters">
-					<h3><strong>Adding CSS3 Filters</strong></h3>
-					<p>
-						Since version 2.12.0 you can add CSS3 filters to slide transitions. <br>
-						You need to define filters as a object for <code>filters</code> option in slider options. Below is an example
-					</p>
-					<pre class="brush: javascript">
-							var slider = new MasterSlider();
-							slider.control('arrows'); 
-							slider.control('thumblist' , {autohide:false ,dir:'h',arrows:false});
-							slider.control('bullets');
-
-							slider.setup('masterslider' , {
-									width:900,
-									height:600,
-									space:5,
-									fillMode:'fit',
-									preload:0,
-									view:'basic',
-									filters: { 
-										grayscale: 1,
-										opacity: 0.5,
-										brightness: 2
-									}
-							});
-						</pre>
-					<p>You can specify filtering target with <code>filterTarget</code> option. It accpets "slide" and "bg" values</p>
-					<p>For more information about CSS3 Filters <a href="https://developer.mozilla.org/en/docs/Web/CSS/filter" target="_blank">please check this document.</a></p>
-					<p><span class="label label-info">Note</span> CSS3 Filters doesn't support in all browsers and in some it dosn't have good performance. <a href="http://caniuse.com/#feat=css-filters" target="_blank">You can check browser support here.</a></p>
-					<p><span class="label label-info">Note</span> Master Slider doesn't support "drop-shadow" filter.</a></p>
-					<hr/>
-				</article>
 				<article class="content-section" id="slide-contents">
 					<h3><strong>Slide Contents</strong></h3>
 					<ol>
@@ -835,19 +785,6 @@
 									<td>0</td>
 									<td>Specifies the Y position of layer.</td>
 								</tr>
-								<tr>
-									<td>data-position</td>
-									<td>"normal"</td>
-									<td>
-										<em>Since V2.12.0</em><br>Specifies type of positioning layer over slide
-										<ul>
-											<li>"normal": layer adds over slide and moves with slide while swiping or chaning slide.</li>
-											<li>"static": it's like "normal" but it doesn't accept layer effect and it always visible over slide.</li>
-											<li>"fixed": layer adds over slider and doen't move while swiping or chaning slide.</li>
-										</ul>
-										<p><span class="label label-info">Note</span> Fixed layers in IE causes links on other layers with defferent type not working.</p>
-									</td>
-								</tr>		
 								<tr>
 									<td>data-origin</td>
 									<td>"tl"</td>
@@ -1523,7 +1460,7 @@
 								<td><strong>show:</strong> moves from front (3D)
 								<br/>
 								<strong>hide :</strong> moves to front (3D) </td>
-								<td>front(300)</td>
+								<td>front(300)
 							</tr>
 							<tr>
 								<td>back</td>
@@ -1531,7 +1468,7 @@
 								<td><strong>show:</strong> moves from back (3D)
 								<br/>
 								<strong>hide :</strong> moves to back (3D) </td>
-								<td>back(300)</td>
+								<td>back(300)
 							</tr>
 							<tr>
 								<td>rotatefront</td>
@@ -1539,7 +1476,7 @@
 								<td><strong>show:</strong> rotate from front (3D)
 								<br/>
 								<strong>hide :</strong> rotate to front (3D) </td>
-								<td>rotatefront(300 , 500 ,c , true)</td>
+								<td>rotatefront(300 , 500 ,c , true)
 							</tr>
 							<tr>
 								<td>rotateback</td>
@@ -1547,7 +1484,7 @@
 								<td><strong>show:</strong> rotate from back (3D)
 								<br/>
 								<strong>hide :</strong> rotate to back (3D) </td>
-								<td>rotateback(300 , 500 ,c , true)</td>
+								<td>rotateback(300 , 500 ,c , true)
 							</tr>
 							<tr>
 								<td>rotate3dleft</td>
@@ -1555,7 +1492,7 @@
 								<td><strong>show:</strong> 3D rotate from left
 								<br/>
 								<strong>hide :</strong> 3D rotate to left </td>
-								<td>rotate3dleft(50 , 0 , 10, short,c,true)</td>
+								<td>rotate3dleft(50 , 0 , 10, short,c,true)
 							</tr>
 							<tr>
 								<td>rotate3dright</td>
@@ -1563,7 +1500,7 @@
 								<td><strong>show:</strong> 3D rotate from right
 								<br/>
 								<strong>hide :</strong> 3D rotate to right </td>
-								<td>rotate3dright(50 , 0 , 10, short,c,true)</td>
+								<td>rotate3dright(50 , 0 , 10, short,c,true)
 							</tr>
 							<tr>
 								<td>rotate3dtop</td>
@@ -1571,7 +1508,7 @@
 								<td><strong>show:</strong> 3D rotate from top
 								<br/>
 								<strong>hide :</strong> 3D rotate to top </td>
-								<td>rotate3dtop(50 , 0 , 10, short,c,true)</td>
+								<td>rotate3dtop(50 , 0 , 10, short,c,true)
 							</tr>
 							<tr>
 								<td>rotate3dbottom</td>
@@ -1579,7 +1516,7 @@
 								<td><strong>show:</strong> 3D rotate from bottom
 								<br/>
 								<strong>hide :</strong> 3D rotate to bottom </td>
-								<td>rotate3dbottom(50 , 0 , 10, short,c,true)</td>
+								<td>rotate3dbottom(50 , 0 , 10, short,c,true)
 							</tr>
 						</tbody>
 					</table>
@@ -1745,12 +1682,12 @@
 										<tr>
 											<td>width</td>
 											<td>100</td>
-											<td>Specifies the width of each thumb in pixel.</td>
+											<td>Specifies the width of each thumb in pixel.<td>
 										</tr>
 										<tr>
 											<td>height</td>
 											<td>100</td>
-											<td>Specifies the height of each thumb in pixel.</td>
+											<td>Specifies the height of each thumb in pixel.<td>
 										</tr>
 										<tr>
 											<td>type</td>
@@ -1778,19 +1715,9 @@
 											<td>Aligns the control to in or out of slider. It accepts "top", "bottom", "left" and "right" values.</td>
 										</tr>	
 										<tr>
-											<td>hover</td>
-											<td>false</td>
-											<td>Whether change slides on hovering over thumbs.</td>
-										</tr>
-										<tr>
-											<td>arrows</td>
-											<td>false</td>
-											<td>Whether add arrows in thumblist</td>
-										</tr>
-										<tr>
 											<td>inset</td>
 											<td>false</td>
-											<td>Whether insert the control inside or outside of slider.</td>
+											<td>Whether insert the control inside or outside of slider.<td>
 										</tr>
 										<tr>
 											<td>margin</td>
@@ -1871,7 +1798,7 @@
 										<tr>
 											<td>inset</td>
 											<td>false</td>
-											<td>Whether insert the control inside or outside of slider.</td>
+											<td>Whether insert the control inside or outside of slider.<td>
 										</tr>
 										<tr>
 											<td>margin</td>
@@ -1998,7 +1925,7 @@
 										<tr>
 											<td>inset</td>
 											<td>false</td>
-											<td>Whether insert the control inside or outside of slider.</td>
+											<td>Whether insert the control inside or outside of slider.<td>
 										</tr>
 										<tr>
 											<td>margin</td>
@@ -2067,7 +1994,7 @@
 										<tr>
 											<td>inset</td>
 											<td>false</td>
-											<td>Whether insert the control inside or outside of slider.</td>
+											<td>Whether insert the control inside or outside of slider.<td>
 										</tr>
 										<tr>
 											<td>margin</td>
@@ -2145,16 +2072,6 @@
 						var slider = new MasterSlider();
 						slider.setup('masterslider' , {width:800, height:350 , view:"flow"});
 					</pre>
-							</p>
-						</li>
-						<li>
-							<h5>stack</h5>
-							<p>
-								<img src="assets/images/scale.gif"/>
-								<pre class="brush: javascript">
-									var slider = new MasterSlider();
-									slider.setup('masterslider' , {width:800, height:350 , view:"stack"});
-								</pre>
 							</p>
 						</li>
 						<li>

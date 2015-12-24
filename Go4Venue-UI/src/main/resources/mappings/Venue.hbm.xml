@@ -2,15 +2,21 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.go4venue.web.persistence.beans.Venue" table="venue" entity-name="venue" >
-		<id name="key" type="java.lang.Long" column="id"  />  
-		<property name="venueName" column="venue_name" type="java.lang.String"/>
-		<property name="venueCapacity" column="venue_capacity" type="java.lang.String"/>
-		<property name="venuePrice" column="venue_price" type="java.lang.Long"/>
-		<property name="venueType" column="venue_type" type="java.lang.String"/>
-		<property name="venueDescription" column="venue_description" type="java.lang.String"/>
-		<property name="venueContractId" column="venue_contract_id" type="java.lang.Long"/>
-		<property name="venueUrl" column="venue_url" type="java.lang.String"/>
+	<class name="com.go4venue.web.persistence.beans.Venue" table="venue" entity-name="venue">
+		<id name="key" type="java.lang.Long" column="id" />
+		<property name="venueName" column="venue_name" type="java.lang.String" />
+		<property name="venueCapacity" column="venue_capacity" type="java.lang.String" />
+		<property name="venuePrice" column="venue_price" type="java.lang.Long" />
+		<property name="venueType" column="venue_type" type="java.lang.String" />
+		<property name="venueDescription" column="venue_description" type="java.lang.String" />
+		<property name="venueContractId" column="venue_contract_id" type="java.lang.Long" />
+		<property name="venueUrl" column="venue_url" type="java.lang.String" />
+		<set name="images" cascade="all" inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="venue_id" />
+			</key>
+			<one-to-many class="com.go4venue.web.persistence.beans.VenueImage" />
+		</set>
 	</class>
 
 </hibernate-mapping>

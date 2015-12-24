@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.go4venue.web.core.beans.VenueSearchInfo;
 import com.go4venue.web.dao.VenueManagerDao;
 import com.go4venue.web.persistence.beans.Amenities;
+import com.go4venue.web.persistence.beans.Locality;
 import com.go4venue.web.persistence.beans.VenueRaw;
 import com.go4venue.web.persistence.beans.VenueType;
 import com.go4venue.web.service.VenueListingService;
@@ -26,7 +27,6 @@ public class VenueListingServiceImpl implements VenueListingService {
     private VenueManagerDao venueManagerDao;
     @Override
     public List<VenueRaw> getVenueListing(VenueSearchInfo venueSearchInfo) {
-	
 	return venueManagerDao.geVenueData(venueSearchInfo);
     }
     @Override
@@ -40,4 +40,8 @@ public class VenueListingServiceImpl implements VenueListingService {
    	List<VenueType>venueTypes = venueManagerDao.getVenueTypes();
    	return venueTypes;
        }
+    @Override
+    public List<Locality> getLocalities(long cityId) {
+	return venueManagerDao.getLocalities(cityId);
+    }
 }

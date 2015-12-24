@@ -1,6 +1,7 @@
 package com.go4venue.web.persistence.beans;
 
 import java.io.Serializable;
+import java.util.Set;
 
 public class Venue implements Serializable{
     
@@ -16,11 +17,25 @@ public class Venue implements Serializable{
     private String venueDescription;
     private long venueContractId;
     private String venueUrl;
+    private Set<VenueImage>images;
+    
     /**
      * @return the id
      */
     public long getKey() {
         return key;
+    }
+    /**
+     * @return the images
+     */
+    public Set<VenueImage> getImages() {
+        return images;
+    }
+    /**
+     * @param images the images to set
+     */
+    public void setImages(Set<VenueImage> images) {
+        this.images = images;
     }
     /**
      * @param id the id to set
