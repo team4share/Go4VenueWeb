@@ -64,13 +64,13 @@
 								<li>
 									<div class="language-bar">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-											<span class="heading"><i class="fa  fa-map-marker "></i>Delhi</span>
+											<span class="heading"><i class="fa  fa-map-marker "></i>Jaipur</span>
 										</a>
 										<ul class="languages-dropdown" role="menu">
-											<li class="active"><a href="#">Delhi</a></li>
-											<li><a href="#">Gurgaon</a></li>
-											<li><a href="#">Noida</a></li>
 											<li><a href="#">Jaipur</a></li>
+											<li class="active"><a href="#">Delhi</a></li>
+											
+											
 										</ul>
 									</div>
 								</li>
@@ -80,10 +80,13 @@
 						</div>
 						<div class="col-sm-4">
 							<div class="topbar-buttons pull-right">
+								<!-- 
 								<a href="login"
 									class="btn-u btn-brd btn-brd-hover btn-u-light margin-right-5">Sign
 									In</a> <a href="register"
 									class="btn-u btn-brd btn-brd-hover btn-u-light">Sign Up</a>
+									-->
+									
 							</div>
 						</div>
 					</div>
@@ -105,50 +108,7 @@
 					<div class="collapse navbar-collapse navbar-responsive-collapse">
 						<ul class="nav navbar-nav">
 							<!-- Home -->
-							<li class="dropdown active"><a href="javascript:void(0);"
-								class="dropdown-toggle" data-toggle="dropdown"> Browse
-									Venues </a>
-								<ul class="dropdown-menu">
-									<li class="dropdown-submenu"><a href="javascript:void(0);">Delhi</a>
-										<ul class="dropdown-menu">
-											<li><a href="blog_large_right_sidebar1.html">Right
-													Sidebar</a></li>
-											<li><a href="blog_large_left_sidebar1.html">Left
-													Sidebar</a></li>
-											<li><a href="blog_large_full_width1.html">Full Width</a></li>
-										</ul></li>
-									<li class="dropdown-submenu"><a href="javascript:void(0);">Bangalore</a>
-										<ul class="dropdown-menu">
-											<li><a href="blog_medium_right_sidebar1.html">Right
-													Sidebar</a></li>
-											<li><a href="blog_medium_left_sidebar1.html">Left
-													Sidebar</a></li>
-											<li><a href="blog_medium_full_width1.html">Full
-													Width</a></li>
-										</ul></li>
-									<li class="dropdown-submenu"><a href="javascript:void(0);">Jaipur</a>
-										<ul class="dropdown-menu">
-											<li><a href="blog_large_right_sidebar_item1.html">Right
-													Sidebar Item</a></li>
-											<li><a href="blog_large_left_sidebar_item1.html">Left
-													Sidebar Item</a></li>
-											<li><a href="blog_large_full_width_item1.html">Full
-													Width Item</a></li>
-										</ul></li>
-									<li class="dropdown-submenu"><a href="javascript:void(0);">Mumbai</a>
-										<ul class="dropdown-menu">
-											<li><a href="blog_large_right_sidebar.html">Right
-													Sidebar Large</a></li>
-											<li><a href="blog_medium_right_sidebar.html">Right
-													Sidebar Medium</a></li>
-											<li><a href="blog_large_full_width.html">Full Width</a></li>
-											<li><a href="blog_large_right_sidebar_item.html">Right
-													Sidebar Item</a></li>
-											<li><a href="blog_large_full_width_item.html">Full
-													Width Item</a></li>
-										</ul></li>
-								</ul></li>
-
+							
 							<!-- End Home -->
 
 							<!-- Pages -->
@@ -189,7 +149,7 @@
 
 				<br>
 				<button class="btn-u btn-brd btn-brd-hover btn-u-light">
-					<a href="#how_it_works"> How It works</a>
+					<a href="#How_it_works"> </a>How It works
 				</button>
 				<div class="topbar-buttons Search-background">
 					<form action="listVenues" id="searchVenue" name="venueSearchForm"
