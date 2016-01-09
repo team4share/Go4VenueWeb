@@ -49,6 +49,46 @@
 </head>
 
 <body class="header-fixed">
+<!-- Get Quote Popup -->
+ <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+   <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">We are happy to help</h4>
+      </div>
+      <div class="modal-body">
+        <p><form id="inquiry_form_headerscroll" method="post">
+<select id="event_type" name="event_type">
+<option value="">-Select Event Type-</option>
+<option value="wedding-reception">Wedding / Reception</option>
+<option value="meeting">Meetings</option>
+<option value="conference">Conference</option>
+<option value="private-party">Private Party</option>
+<option value="birthday-party">Birthday Party</option>
+</select>
+
+<div><input type="text" name="name" id="nameheader" placeholder="Name" value=""></div>
+<div ><input type="text" name="email" id="emailheader" value="" placeholder="Email id" ></div>
+<div ><input type="text" id="contact" name="mobile" placeholder="Mobile no"></div>
+<div ><input type="text" id="noofguestesheader" name="noofguestes" placeholder="No. of Guests" class="panel_guest"></div>
+<div> <textarea class="panel_comments" id="commentsheader" name="comments" placeholder="Event Details"></textarea> </div>
+<div > <input type="date" name="event_date" id="event_date_headerscroll" placeholder="Event date" class="panel_guest"></div>
+<div > <input type="checkbox" id="mdatesheader" name="flex" value="1"> My dates are flexible</div>
+
+<div class="panel_form_btn"> <input type="submit" value="Send Enquiry" class="panel_send_btn"> </div>
+</form></p>
+        
+        
+      </div>
+      </div>
+
+
+  </div>
+</div>
+<!-- End Get Quote Popup -->
 	<div class="wrapper">
 		<!--=== Header v2 ===-->
 		<div class="header-v2 header-sticky">
@@ -113,7 +153,7 @@
 
 							<!-- Pages -->
 							<li class=""><a href="javascript:void(0);"
-								class="btn-u btn-brd btn-brd-hover btn-u-light">Get Quote</a></li>
+								class="btn-u btn-brd btn-brd-hover btn-u-light" data-toggle="modal" data-target="#myModal">Get Quote</a></li>
 							<!-- End Pages -->
 
 							<!-- Blog -->
