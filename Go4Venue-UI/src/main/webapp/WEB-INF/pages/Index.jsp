@@ -107,12 +107,12 @@
 											<span class="heading"><i class="fa  fa-map-marker "></i>Jaipur</span>
 										</a>
 										<ul class="languages-dropdown" role="menu">
-											<li><a href="#">Jaipur</a></li>
-											<li class="active"><a href="#">Delhi</a></li>
+											<li class="active"><a href="#">Jaipur</a></li>
+											<li class=""><a href="#">Delhi</a></li>
 											
 											
 										</ul>
-									</div>
+									</div> 
 								</li>
 
 
@@ -490,7 +490,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<p>
-								2015 &copy; All Rights Reserved. <a href="#">Privacy Policy</a>
+								2016 &copy; All Rights Reserved. <a href="#">Privacy Policy</a>
 								| <a href="#">Terms of Service</a>
 							</p>
 						</div>
@@ -503,30 +503,14 @@
 										<i class="fa fa-facebook"></i>
 								</a></li>
 								<li><a href="#" class="tooltips" data-toggle="tooltip"
-									data-placement="top" title="" data-original-title="Skype">
-										<i class="fa fa-skype"></i>
-								</a></li>
-								<li><a href="#" class="tooltips" data-toggle="tooltip"
 									data-placement="top" title="" data-original-title="Google Plus">
 										<i class="fa fa-google-plus"></i>
-								</a></li>
-								<li><a href="#" class="tooltips" data-toggle="tooltip"
-									data-placement="top" title="" data-original-title="Linkedin">
-										<i class="fa fa-linkedin"></i>
-								</a></li>
-								<li><a href="#" class="tooltips" data-toggle="tooltip"
-									data-placement="top" title="" data-original-title="Pinterest">
-										<i class="fa fa-pinterest"></i>
 								</a></li>
 								<li><a href="#" class="tooltips" data-toggle="tooltip"
 									data-placement="top" title="" data-original-title="Twitter">
 										<i class="fa fa-twitter"></i>
 								</a></li>
-								<li><a href="#" class="tooltips" data-toggle="tooltip"
-									data-placement="top" title="" data-original-title="Dribbble">
-										<i class="fa fa-dribbble"></i>
-								</a></li>
-							</ul>
+									</ul>
 						</div>
 						<!-- End Social Links -->
 					</div>
