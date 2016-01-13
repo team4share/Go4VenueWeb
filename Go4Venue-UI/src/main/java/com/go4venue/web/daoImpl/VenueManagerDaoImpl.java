@@ -16,7 +16,6 @@ import com.go4venue.web.persistence.beans.Amenities;
 import com.go4venue.web.persistence.beans.GuestRange;
 import com.go4venue.web.persistence.beans.Locality;
 import com.go4venue.web.persistence.beans.Venue;
-import com.go4venue.web.persistence.beans.VenueRaw;
 import com.go4venue.web.persistence.beans.VenueType;
 
 /**
@@ -30,10 +29,10 @@ import com.go4venue.web.persistence.beans.VenueType;
 public class VenueManagerDaoImpl extends CommonDBDao implements VenueManagerDao {
 
     @Override
-    public List<VenueRaw> geVenueData(VenueSearchInfo venueSearchInfo) {
-	String query = "select * from venue_raw";
-	SQLQuery venueMappedQuery = getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("VenueRaw");
-	List<VenueRaw> venues = venueMappedQuery.list();
+    public List<Venue> geVenueData(VenueSearchInfo venueSearchInfo) {
+	String query = "select * from venue";
+	SQLQuery venueMappedQuery = getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("venue");
+	List<Venue> venues = venueMappedQuery.list();
 	return venues != null && venues.size() > 0 ? venues : null;
     }
 
@@ -82,4 +81,12 @@ public class VenueManagerDaoImpl extends CommonDBDao implements VenueManagerDao 
 	String query = "select path from venue_images where venue_id"+venueId;
 	return null;
     }
+
+    @Override
+    public Amenities getAmenityByCode(String code) {
+	String query = "Select * from amenities where code = "+code;
+	SQLQuery venueMappedQuery = getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("amenities");
+	return venueMappedQuery.list() != null && venueMappedQuery.list().size() > 0 ? (Amenities)venueMappedQuery.list().get(0) : null;
+    }
+	
 }

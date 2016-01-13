@@ -7,6 +7,8 @@ public class Amenities implements Serializable {
     private long key;
     private String name;
     private String css;
+    private String code;
+    
     public long getKey() {
 	return key;
     }
@@ -30,6 +32,18 @@ public class Amenities implements Serializable {
      */
     public void setCss(String css) {
 	this.css = css;
+    }
+    /**
+     * @return the code
+     */
+    public String getCode() {
+	return code;
+    }
+    /**
+     * @param code the code to set
+     */
+    public void setCode(String code) {
+	this.code = code;
     }
 
 }

@@ -20,7 +20,6 @@ import com.go4venue.web.core.beans.VenueSearchInfo;
 import com.go4venue.web.persistence.beans.City;
 import com.go4venue.web.persistence.beans.Locality;
 import com.go4venue.web.persistence.beans.Venue;
-import com.go4venue.web.persistence.beans.VenueRaw;
 import com.go4venue.web.service.ApplicationService;
 import com.go4venue.web.service.VenueListingService;
 import com.google.gson.Gson;
@@ -46,17 +45,14 @@ public class VenueManagerController {
     @RequestMapping(value = "/listVenues", method = RequestMethod.POST)
     public String listVenues(@ModelAttribute VenueSearchInfo venueSearchInfo, ModelMap model) {
 	LOG.info(venueSearchInfo.getLocationId() + "  " + venueSearchInfo.getOccasionId());
-	List<VenueRaw> venues = venueListingService.getVenueListing(venueSearchInfo);
-	List<VenueRaw> venuesList = new ArrayList<>();
-	for (VenueRaw venueRaw : venues) {
-	    venueRaw.setVenueName(venueRaw.getVenueName().replace("http://www.venuelook.com/", ""));
-	    venueRaw.setVenueUrl(venueRaw.getVenueUrl().replace("http://www.venuelook.com/", ""));
-	    venueRaw.setVenueDescription("");
+	List<Venue> venues = venueListingService.getVenueListing(venueSearchInfo);
+	List<Venue> venuesList = new ArrayList<>();
+	for (Venue venueRaw : venues) {
+	    venueRaw.setName(venueRaw.getName().replace("http://www.venuelook.com/", ""));
+	    venueRaw.setWebsiteUrl(venueRaw.getWebsiteUrl().replace("http://www.venuelook.com/", ""));
+	    venueRaw.setDescription("");
 	    venuesList.add(venueRaw);
 	}
-	
-	Venue venue = new Venue();
-	
 	
 	Gson gson = new Gson();
 	System.out.println(gson.toJson(venuesList));

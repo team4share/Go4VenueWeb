@@ -27,6 +27,7 @@ public class ApplicationDaoImpl extends CommonDBDao implements ApplicationDao {
 	String query = "select * from city";
 	@SuppressWarnings("unchecked")
 	List<City>cities = getSessionFactory().openSession().createSQLQuery(query).addEntity("city").list();
+	//System.out.println("cities" +cities.size());
 	return cities;
     }
 

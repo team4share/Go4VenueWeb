@@ -10,6 +10,7 @@ public class Occasion implements Serializable{
     private static final long serialVersionUID = 1L;
     private long key;
     private String name;
+    private String code;
     
     /**
      * @return the key
@@ -34,6 +35,18 @@ public class Occasion implements Serializable{
      */
     public void setName(String name) {
 	this.name = name;
+    }
+    /**
+     * @return the code
+     */
+    public String getCode() {
+	return code;
+    }
+    /**
+     * @param code the code to set
+     */
+    public void setCode(String code) {
+	this.code = code;
     }
 
 }

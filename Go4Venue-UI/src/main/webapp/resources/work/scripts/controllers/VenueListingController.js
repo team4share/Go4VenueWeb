@@ -7,6 +7,7 @@ app.controller('VenueListingController', function($scope, $http) {
 	$scope.amenities = getAmenities();
 	$scope.venueTypes = getVenueTypes();
 	$scope.cities = getCities();
+	console.log($scope.cities);
 	$scope.occasions = getOccasions();
 	console.log($scope.cities[0]);
 	$scope.orderProp= 'venueCapacity';

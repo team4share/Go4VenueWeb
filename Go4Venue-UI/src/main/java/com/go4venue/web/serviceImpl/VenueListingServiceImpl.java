@@ -12,7 +12,7 @@ import com.go4venue.web.core.beans.VenueSearchInfo;
 import com.go4venue.web.dao.VenueManagerDao;
 import com.go4venue.web.persistence.beans.Amenities;
 import com.go4venue.web.persistence.beans.Locality;
-import com.go4venue.web.persistence.beans.VenueRaw;
+import com.go4venue.web.persistence.beans.Venue;
 import com.go4venue.web.persistence.beans.VenueType;
 import com.go4venue.web.service.VenueListingService;
 
@@ -26,9 +26,21 @@ public class VenueListingServiceImpl implements VenueListingService {
     @Autowired
     private VenueManagerDao venueManagerDao;
     @Override
-    public List<VenueRaw> getVenueListing(VenueSearchInfo venueSearchInfo) {
-	return venueManagerDao.geVenueData(venueSearchInfo);
+    public List<Venue> getVenueListing(VenueSearchInfo venueSearchInfo) {
+	List<Venue>venues = venueManagerDao.geVenueData(venueSearchInfo);
+	for(Venue venue : venues) {
+	    Amenities aminity = venueManagerDao.getAmenityByCode(venue.getAmenities());
+	}
+	return venues;
     }
+    
+    private String getAmenityString(String code) {
+	
+	//long id = String.
+	return null;
+	
+    }
+      
     @Override
     public List<Amenities> getAmenities() {
 	List<Amenities>amenities = venueManagerDao.getAmenities();
