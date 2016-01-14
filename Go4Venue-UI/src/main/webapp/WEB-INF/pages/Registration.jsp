@@ -26,8 +26,13 @@
     <link rel="stylesheet" href="resources/assets/plugins/animate.css">
     <link rel="stylesheet" href="resources/assets/plugins/line-icons/line-icons.css">
     <link rel="stylesheet" href="resources/assets/plugins/font-awesome/css/font-awesome.min.css">
+    
     <!-- CSS Page Style -->
     <link rel="stylesheet" href="resources/assets/css/pages/page_log_reg_v2.css">
+    
+    <!-- CSS Theme Colours -->
+    <link rel="stylesheet" href="resources/assets/css/theme-colors/purple.css">
+    
     <!-- CSS Customization -->
     <link rel="stylesheet" href="resources/assets/css/custom.css">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
@@ -47,8 +52,7 @@
                 <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="#"></a></li>
                 <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="#"></a></li>
                 <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="#"></a></li>
-                <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="#"></a></li>
-            </ul>
+             </ul>
             <p>Already Signed Up? Click <a class="color-green" href="login">Sign In</a> to login your account.</p>
         </div>
          <div class="input-group margin-bottom-5">
@@ -79,24 +83,45 @@
             <input type="text" class="form-control" placeholder="Confirm Password" ng-model = "formData.confirmPassword">
         </div>
         
-        <div class="input-group margin-bottom-5">
-            <span class="input-group-addon"><i class="fa  fa-group"></i></span>     
-            <span class="input-group-addon"><input type="radio" name="user_type" ng-model = "formData.userType" value ="seeker"> Venue Seeker</span>
-            <span class="input-group-addon"><input type="radio" name="user_type" ng-model = "formData.userType" value = "owner"> Venue Owner</span>
-        </div>
-        <hr>
+                <hr>
 
         <div class="checkbox">
             <label>
                 <input type="checkbox">
-                I read <a target="_blank" href="page_terms.html">Terms and Conditions</a>
+                I have read <a target="_blank" href="page_terms.html">Terms and Conditions</a>
             </label>
         </div>
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <button type="submit" class="btn-u btn-block" ng-click="submit(formData)">Register</button>
+                <button type="submit" class="btn-u btn-block"  data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="submit(formData)">Register</button>
             </div>
+            
+            <!-- Popup modal for Otp -->
+                        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 id="myLargeModalLabel3" class="modal-title">Verify Mobile Number</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>Please Enter The OTP Sent On Your Mobile</p>
+                                      <p>
+                                          <input class="form-control" type="text" placeholder="OTP" /></p>
+                                               
+                                    </div>
+                                    <div class="modal-footer">
+                                  
+                                        <button type="button" class="btn-u btn-u-primary">Submit</button>
+                            <button type="button" class="btn-u btn-u-default-otp" data-dismiss="modal">Regenerate</button>
+                                      </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                                    <!-- End Popup Modal For Otp -->
+            
         </div>
     </div>
     <!--End Reg Block-->

@@ -4,7 +4,7 @@
 
 .reg-block {
 	
-	border-top: solid 2px #7323DC;
+	border-top: solid 2px #814fb5;
         
 }
 /* margin for signup block */
@@ -50,4 +50,25 @@ margin: 40px auto;
   
   padding: 3px 13px;
    
+}
+
+.font-white
+{
+text-decoration-color: white;
+
+}
+
+/* Style for aligning footer button of OTP Popup modal in registration page*/
+.modal-footer>button
+{
+float: left;}
+
+.btn-u.btn-u-default-otp {
+   background: #E70A48;
+}
+
+/*Style for changing color of buttons from purple to maroon & vice verse onHover*/
+
+.btn-u.btn-block:hover{
+background:#E70A48
 }

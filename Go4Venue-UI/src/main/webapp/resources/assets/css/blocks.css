@@ -2334,12 +2334,12 @@
 }
 
 .flat-testimonials .flat-testimonials-in p:before {
-  content: "â€œ";
+  content: "“";
   padding-right: 5px;
 }
 
 .flat-testimonials .flat-testimonials-in p:after {
-  content: "â€";
+  content: "”";
   padding-left: 5px;
 }
 

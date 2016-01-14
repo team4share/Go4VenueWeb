@@ -46,8 +46,7 @@
                 <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="#"></a></li>
                 <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="#"></a></li>
                 <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="#"></a></li>
-                <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="#"></a></li>
-            </ul>
+               </ul>
             <p>Don't Have Account? Click <a class="color-green" href="register">Sign Up</a> to registration.</p>
         </div>
 		 <form id="loginForm" method="post" action="loginUser" modelAttribute="loginInfo">
