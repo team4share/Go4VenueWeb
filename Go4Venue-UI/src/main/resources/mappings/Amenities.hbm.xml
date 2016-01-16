@@ -5,6 +5,7 @@
 	<class name="com.go4venue.web.persistence.beans.Amenities" table="amenities" entity-name="amenities" >
 		<id name="key" type="java.lang.Long" column="id"  />  
 		<property name="name" column="name" type="java.lang.String"/>
+		<property name="code" column="code" type="java.lang.String"/>
 		<property name="css" column="css" type="java.lang.String"/>
 	</class>
 </hibernate-mapping>

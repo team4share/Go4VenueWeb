@@ -4,19 +4,28 @@
 <hibernate-mapping>
 	<class name="com.go4venue.web.persistence.beans.Venue" table="venue" entity-name="venue">
 		<id name="key" type="java.lang.Long" column="id" />
-		<property name="venueName" column="venue_name" type="java.lang.String" />
-		<property name="venueCapacity" column="venue_capacity" type="java.lang.String" />
-		<property name="venuePrice" column="venue_price" type="java.lang.Long" />
-		<property name="venueType" column="venue_type" type="java.lang.String" />
-		<property name="venueDescription" column="venue_description" type="java.lang.String" />
-		<property name="venueContractId" column="venue_contract_id" type="java.lang.Long" />
-		<property name="venueUrl" column="venue_url" type="java.lang.String" />
-		<set name="images" cascade="all" inverse="true" lazy="true" fetch="select">
+		<property name="name" column="name" type="java.lang.String" />
+		<property name="capacity" column="capacity" type="java.lang.String" />
+		<property name="price" column="price" type="java.lang.String" />
+		<property name="contact" column="contact" type="java.lang.String" />
+		<property name="address" column="address" type="java.lang.String" />
+		<property name="description" column="description" type="java.lang.String" />
+		<property name="operatingTime" column="operating_time" type="java.lang.String" />		
+		<property name="status" column="status" type="java.lang.Integer" />
+		<property name="ownerId" column="owner_id" type="java.lang.Long" />
+		<property name="websiteUrl" column="website_url" type="java.lang.String" />
+		<property name="fbUrl" column="fb_url" type="java.lang.String" />
+		<property name="lattitude" column="lattitude" type="java.lang.Double" />
+		<property name="longitude" column="longitude" type="java.lang.Double" />
+		<property name="amenities" column="amenities" type="java.lang.String" />
+		<property name="occasions" column="occasions" type="java.lang.String" />
+		<property name="type" column="type" type="java.lang.String" />
+		<property name="cusines" column="cusines" type="java.lang.String" />
+		<!-- <set name="images" cascade="all" inverse="true" lazy="true" fetch="select">
 			<key>
 				<column name="venue_id" />
 			</key>
 			<one-to-many class="com.go4venue.web.persistence.beans.VenueImage" />
-		</set>
+		</set> -->
 	</class>
-
 </hibernate-mapping>
