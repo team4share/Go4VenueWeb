@@ -38,7 +38,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>-->
     <script src="resources/work/scripts/controllers/UserController.js"></script>
-   
+   <!-- FB Script -->
+    <script src="resources/work/scripts/libraries/fbLoginScript.js"></script>
 </head>
 <body>
 <!--=== Content Part ===-->
@@ -48,9 +49,11 @@
     <div class="reg-block reg-block-margin">
         <div class="reg-block-header">
             <h2>Sign Up</h2>
+             
+               <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
             <ul class="social-icons text-center">
-                <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="#"></a></li>
-                <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="#"></a></li>
+                <li><a class="rounded-x social_facebook" data-original-title="Facebook" onclick="checkLoginState();"></a></li>
+                <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href=""></a></li>
              </ul>
             <p>Already Signed Up? Click <a class="color-green" href="login">Sign In</a> to login your account.</p>
         </div>
