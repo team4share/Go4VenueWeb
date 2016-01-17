@@ -16,7 +16,7 @@
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-   //   document.getElementById('status').innerHTML = 'Please log ' +        'into Facebook.';
+      document.getElementById('status').innerHTML = 'Please log ' +        'into Facebook.';
     }
   }
 
@@ -70,9 +70,12 @@
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
+    FB.api('/me?fields=first_name,last_name,email', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Thanks for logging in, ' + response.first_name + ' last name '+response.last_name+'! '+response.email+' '+response.bio;
+      
     });
+ // get user details and insert into database if not exists
+    //Forward to another page by changing the redirect uri in the dashboard or handle via response here itself
   }

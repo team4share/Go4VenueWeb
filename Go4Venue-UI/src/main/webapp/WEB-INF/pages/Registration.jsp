@@ -3,6 +3,16 @@
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+<% 
+
+ 
+if(request.getParameter("code") != "null" || request.getParameter("code") != null){
+	%>
+	<jsp:include page="/googleOauthCallback" />
+<% 
+}
+%>
 <head>
     <title>Registration Page | Go4Venue</title>
 
@@ -51,9 +61,10 @@
             <h2>Sign Up</h2>
              
                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+               <din id="status"></din>
             <ul class="social-icons text-center">
                 <li><a class="rounded-x social_facebook" data-original-title="Facebook" onclick="checkLoginState();"></a></li>
-                <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href=""></a></li>
+                <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/Go4Venue-UI/register&response_type=code&client_id=493613922297-f1g2vbtud9oimgbgo8642rjb81tctf3n.apps.googleusercontent.com&approval_prompt=force"></a></li>
              </ul>
             <p>Already Signed Up? Click <a class="color-green" href="login">Sign In</a> to login your account.</p>
         </div>

@@ -46,6 +46,8 @@
 <script src="resources/work/scripts/controllers/SearchController.js"></script>
 <!-- CSS Customization -->
 <link rel="stylesheet" href="resources/assets/css/custom.css">
+    <script src="resources/work/scripts/libraries/fbLoginScript.js"></script>
+
 </head>
 
 <body class="header-fixed">
@@ -98,6 +100,7 @@
 					<div class="row">
 						<div class="col-sm-8">
 							<ul class="list-inline top-v2-contacts">
+							 
 								<li><i class="fa  fa-envelope "></i> <a
 									href="mailto:support@go4venue.com">support@go4venue.com</a></li>
 								<li><i class="fa fa-phone-square "></i> +70 396 4587 99</li>
@@ -498,15 +501,15 @@
 						<!-- Social Links -->
 						<div class="col-md-6">
 							<ul class="footer-socials list-inline">
-								<li><a href="#" class="tooltips" data-toggle="tooltip"
+								<li><a href="https://www.facebook.com/Go4Venue-870992683017522/" class="tooltips" data-toggle="tooltip"
 									data-placement="top" title="" data-original-title="Facebook">
 										<i class="fa fa-facebook"></i>
 								</a></li>
-								<li><a href="#" class="tooltips" data-toggle="tooltip"
+								<li><a href="https://plus.google.com/109763444245003913082" class="tooltips" data-toggle="tooltip"
 									data-placement="top" title="" data-original-title="Google Plus">
 										<i class="fa fa-google-plus"></i>
 								</a></li>
-								<li><a href="#" class="tooltips" data-toggle="tooltip"
+								<li><a href="https://twitter.com/go4venue" class="tooltips" data-toggle="tooltip"
 									data-placement="top" title="" data-original-title="Twitter">
 										<i class="fa fa-twitter"></i>
 								</a></li>
