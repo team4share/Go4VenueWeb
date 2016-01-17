@@ -21,7 +21,7 @@ app.controller('VenueListingController', function($scope, $http) {
 		var venues_copy =[];
 		venues_copy = angular.copy(getVenues());
 		for(var i=0;i<venues_copy.length;i++) {
-			var venueFacilities = venues_copy[i].venueFacilities;
+			var venueFacilities = venues_copy[i].amenities;
 			var array = venueFacilities.split(",");
 			$scope.venues[i].array = array;
 		}

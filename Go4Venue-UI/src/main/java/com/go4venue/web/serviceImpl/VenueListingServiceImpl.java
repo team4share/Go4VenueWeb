@@ -30,6 +30,9 @@ public class VenueListingServiceImpl implements VenueListingService {
 	List<Venue>venues = venueManagerDao.geVenueData(venueSearchInfo);
 	for(Venue venue : venues) {
 	    Amenities aminity = venueManagerDao.getAmenityByCode(venue.getAmenities());
+	   //  getAmenityString(aminity.getCode()); 
+	   // set this in venue.setAmenities(amenities);
+	    venue.setAmenities("Parking,Alcohol,Wi-Fi");
 	}
 	return venues;
     }
