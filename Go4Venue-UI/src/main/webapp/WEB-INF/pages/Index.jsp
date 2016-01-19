@@ -30,17 +30,19 @@
 <link rel="stylesheet" href="resources/assets/css/headers/header-v2.css">
 <link rel="stylesheet" href="resources/assets/css/footers/footer-v1.css">
 
+<!-- CSS Corousel -->
+<link rel="stylesheet" href="resources/assets/plugins/fancybox/source/jquery.fancybox.css">
+<link rel="stylesheet" href="resources/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
 <!-- CSS Implementing Plugins -->
 <link rel="stylesheet" href="resources/assets/plugins/animate.css">
 <link rel="stylesheet"
 	href="resources/assets/plugins/line-icons/line-icons.css">
 <link rel="stylesheet"
 	href="resources/assets/plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="resources/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+    
+<link rel="stylesheet" href="resources/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
 
-<link rel="stylesheet"
-	href="resources/assets/plugins/fancybox/source/jquery.fancybox.css">
-<link rel="stylesheet"
-	href="resources/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
 <script
 	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <script src="resources/work/scripts/controllers/SearchController.js"></script>
@@ -49,71 +51,211 @@
 </head>
 
 <body class="header-fixed">
-<!-- Get Quote Popup -->
- <div id="myModal" class="modal fade" role="dialog">
+    
+    
+    <!-- Popup Form For Get Quote-->
+    <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
-   <div class="modal-content">
+    <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">We are happy to help</h4>
+        <h4 class="modal-title">Let Us Find The Best Offer For You</h4>
       </div>
+        
       <div class="modal-body">
-        <p><form id="inquiry_form_headerscroll" method="post">
-<select id="event_type" name="event_type">
-<option value="">-Select Event Type-</option>
-<option value="wedding-reception">Wedding / Reception</option>
-<option value="meeting">Meetings</option>
-<option value="conference">Conference</option>
-<option value="private-party">Private Party</option>
-<option value="birthday-party">Birthday Party</option>
-</select>
+         
+                       
 
-<div><input type="text" name="name" id="nameheader" placeholder="Name" value=""></div>
-<div ><input type="text" name="email" id="emailheader" value="" placeholder="Email id" ></div>
-<div ><input type="text" id="contact" name="mobile" placeholder="Mobile no"></div>
-<div ><input type="text" id="noofguestesheader" name="noofguestes" placeholder="No. of Guests" class="panel_guest"></div>
-<div> <textarea class="panel_comments" id="commentsheader" name="comments" placeholder="Event Details"></textarea> </div>
-<div > <input type="date" name="event_date" id="event_date_headerscroll" placeholder="Event date" class="panel_guest"></div>
-<div > <input type="checkbox" id="mdatesheader" name="flex" value="1"> My dates are flexible</div>
+                   <!-- Begin Content -->
+                <!-- Tabs -->
+                <div class="tab-v1">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#home-1" data-toggle="tab">Get Quote</a></li>
+                        <li><a href="#profile-1" data-toggle="tab">Quick Call</a></li>
+                        </ul>
+                    <div class="tab-content">
+                        <!-- Send Enquiry Forms -->
+                        <div class="tab-pane fade in active" id="home-1">
+                            <form action="#" id="sky-form" class="sky-form">
+                                <header>Please Provide Your Event Details.</header>
 
-<div class="panel_form_btn"> <input type="submit" value="Send Enquiry" class="panel_send_btn"> </div>
-</form></p>
-        
+                                <fieldset>
+                                    
+                                    <div class="row">
+                                        
+                                        <section class="col col-6">
+                                            <label class="label">Select Event</label>
+                                <label class="select">
+                                    <select name="event" placeholder="">
+                                        <option value="none" selected disabled>I am hosting</option>
+                                        <option value="Wedding">Wedding</option>
+                                        <option value="Engagement">Engagement</option>
+                                        <option value="Reception">Reception</option>
+                                        <option value="Birthday">Birthday</option>
+                                        
+                                    </select>
+                                    <i></i>
+                                </label>
+                            </section>
+                                         
+                           <section class="col col-6">
+                               <label class="label">Select Event Date</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-calendar"></i>
+                                                <input type="text" name="event_date" id="finish" placeholder="Event date">
+                                            </label>
+                                        </section>
+                                    </div>
+
+                                  
+                                    <div class="row">
+                                        <section class="col col-6">
+                                              <label class="label">No.Of Guests</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-users"></i>
+                                                <input type="text" name="guest" id="guest" placeholder="No. Of Guests">
+                                            </label>
+                                        </section>
+                                        <section class="col col-6">
+                                            <label class="label">Enter Budget</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-money"></i>
+                                                <input type="text" name="Budget" id="Budget" placeholder="Budget">
+                                            </label>
+                                        </section>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        
+                                        
+                                        <section class="col col-6">
+                                            <label class="label">Preffered Location</label>
+                                <label class="select">
+                                    <select name="event" placeholder="" >
+                                        <option value="Mansarovar" selected disabled>Mansarovar</option>
+                                        <option value="New Sanganer Road">New Sanganer Road</option>
+                                        <option value="New Sanganer Road">Sodala</option>
+                                        <option value="Malviya Nagar">Malviya Nagar</option>
+                                        <option value="Bani Park">Bani Park</option>
+                                        
+                                    </select>
+                                    <i></i>
+                                </label>
+                            </section>
+                                         
+                           <section class="col col-6">
+                               <label class="label">Enter Name</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-user"></i>
+                                                <input type="text" name="name" id="finish" placeholder="Contact Name">
+                                            </label>
+                                        </section>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <section class="col col-6">
+                                              <label class="label">Enter Mobile Number</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-phone-square"></i>
+                                                <input type="text" name="contac_number" id="guest" placeholder="Contact Number">
+                                            </label>
+                                        </section>
+                                        <section class="col col-6">
+                                            <label class="label">Enter Email</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-envelope"></i>
+                                                <input type="text" name="email" id="email" placeholder="Email-ID">
+                                            </label>
+                                        </section>
+                                    </div>
+                                    
+                                </fieldset>
+                                <footer>
+                                    <button type="submit" class="btn-u ">Submit</button>
+                                    
+                                </footer>
+                            </form>
+                        </div>
+                        <!-- End Datepicker Forms -->
+
+                        <!-- Validation Forms -->
+                        <div class="tab-pane fade" id="profile-1">
+                            <form action="#" id="sky-form1" class="sky-form">
+                                <header>Please Enter Contact Details</header>
+
+                                <fieldset>
+                                    <div class="row">
+                                        <section class="col col-6">
+                                            <label class="label">Enter Name</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-user"></i>
+                                                <input type="text" name="required">
+                                            </label>
+                                        </section>
+                                        <section class="col col-6">
+                                            <label class="label">Enter Contact Number</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-phone"></i>
+                                                <input type="text" name="contact">
+                                            </label>
+                                        </section>
+                                    </div>
+                                          
+                                </fieldset>
+
+                                <footer>
+                                    <button type="submit" class="btn-u ">Submit</button>
+                                    </footer>
+                            </form>
+                        </div>
+                        <!-- End Validation Forms -->
+
+                    </div>
+                </div>
+                <!-- End Tabs-->
+      
+            <!-- End Content -->
+
+                        
+
+                        
+                   
+                <!-- End  Form -->
+
         
       </div>
-      </div>
-
+     
+    </div>
 
   </div>
 </div>
-<!-- End Get Quote Popup -->
-	<div class="wrapper">
-		<!--=== Header v2 ===-->
-		<div class="header-v2 header-sticky">
-			<div class="container container-space">
-				<!-- Topbar v2 -->
-				<div class="topbar-v2">
-					<div class="row">
-						<div class="col-sm-8">
-							<ul class="list-inline top-v2-contacts">
-								<li><i class="fa  fa-envelope "></i> <a
-									href="mailto:support@go4venue.com">support@go4venue.com</a></li>
-								<li><i class="fa fa-phone-square "></i> +70 396 4587 99</li>
-								<li>
-									<div class="language-bar">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-											<span class="heading"><i class="fa  fa-map-marker "></i>Jaipur</span>
-										</a>
-										<ul class="languages-dropdown" role="menu">
-											<li class="active"><a href="#">Jaipur</a></li>
-											<li class=""><a href="#">Delhi</a></li>
-											
-											
-										</ul>
-									</div> 
-								</li>
+<!--End popup Form For Get Quote-->
+<div class="wrapper">
+    <!--=== Header v2 ===-->
+    <div class="header-v2 header-sticky">
+        <div class="container container-space">
+            <!-- Topbar v2 -->
+            <div class="topbar-v2">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <ul class="list-inline top-v2-contacts">
+                            <li><i class="fa  fa-envelope "></i> <a href="mailto:support@go4venue.com">support@go4venue.com</a></li>
+                            <li><i class="fa fa-phone-square "></i> +70 396 4587 99</li>
+                          <li>
+                                <div class="language-bar">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="heading"><i class="fa  fa-map-marker "></i> Jaipur</span>
+                                    </a>
+                                    <ul class="languages-dropdown" role="menu">
+                                        <li class="active">
+                                            <a href="#">Jaipur</a>
+                                        </li>
+                                        <li><a href="#">Delhi</a></li>
+                                    </ul>
+                                </div>
+                            </li>
 
 
 							</ul>
@@ -151,34 +293,60 @@
 							
 							<!-- End Home -->
 
-							<!-- Pages -->
-							<li class=""><a href="javascript:void(0);"
-								class="btn-u btn-brd btn-brd-hover btn-u-light" data-toggle="modal" data-target="#myModal">Get Quote</a></li>
-							<!-- End Pages -->
+                        <!-- Pages -->
+                         <li class="">
+                            
+                      
+                        
+                            <a href="javascript:void(0);"  class="btn-u btn-brd btn-brd-hover btn-u-light" data-toggle="modal" data-target="#myModal">Get Quote</a>
+            
 
-							<!-- Blog -->
-							<li class="">&nbsp; &nbsp;</li>
+                      
+                           
+                        </li>
+                        <!-- End Pages -->
 
+                        <!-- Blog -->
+                        <li class="">
+                            &nbsp; &nbsp;
+                            </li>
+                        
+                        <!-- End Blog -->
 
-							<!-- End Blog -->
+                        <!-- Portfolio -->
+                       <li class="">
+                            
+                      
+                        
+                            <a href="javascript:void(0);"  class="btn-u btn-brd btn-brd-hover btn-u-light" >List Your Venue</a>
+            
 
+                      
+                           
+                        </li>
+                        <!-- End Portfolio -->
+ <!--  <li class="">
+ <!--  <li class="">
+                            
+                      
+                        
+                            <a href="javascript:void(0);"  class="btn-u btn-brd btn-brd-hover btn-u-light" >List Your Venue</a>
+            
 
-							<!-- Portfolio -->
-							<li class=""><a href="javascript:void(0);"
-								class="btn-u btn-brd btn-brd-hover btn-u-light">List Your
-									Venue</a></li>
-							<!-- End Portfolio -->
+                      
+                           
+                        </li>
+                     -->   <!-- End Portfolio -->
 
-
-							<!-- End Misc Pages -->
-						</ul>
-					</div>
-					<!--/navbar-collapse-->
-				</div>
-			</div>
-			<!-- End Navbar -->
-		</div>
-		<!--=== End Header v2 ===-->
+                       
+                        <!-- End Misc Pages -->
+                    </ul>
+                </div><!--/navbar-collapse-->
+            </div>
+        </div>
+        <!-- End Navbar -->
+    </div>
+    <!--=== End Header v2 ===-->
 
 		<!-- Image Gradient Go4Venue -->
 
@@ -212,7 +380,7 @@
 
 
 					</form>
-				</div>
+				</div>He
 			</div>
 		</div>
 		<!-- End Image Gradient -->
@@ -540,16 +708,28 @@
 		src="resources/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
 	<script type="text/javascript"
 		src="resources/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-	<!-- JS Customization -->
-	<script type="text/javascript" src="resources/assets/js/custom.js"></script>
-	<!-- JS Page Level -->
+	
+	 <!-- JS For Enquiry Form-->
+    <script src="resources/assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+<script src="resources/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+<script src="resources/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+
+		<!-- JS Page Level -->
 	<script type="text/javascript" src="resources/assets/js/app.js"></script>
 	<script type="text/javascript"
 		src="resources/assets/js/plugins/owl-carousel.js"></script>
+<script type="text/javascript" src="resources/assets/js/plugins/masking.js"></script>
+<script type="text/javascript" src="resources/assets/js/plugins/datepicker.js"></script>
+<script type="text/javascript" src="resources/assets/js/plugins/validation.js"></script>
+<!-- JS Customization -->
+	<script type="text/javascript" src="resources/assets/js/custom.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
 			OwlCarousel.initOwlCarousel();
+Masking.initMasking();
+        Datepicker.initDatepicker();
+        Validation.initValidation();
 		});
 	</script>
 	<!--[if lt IE 9]>
