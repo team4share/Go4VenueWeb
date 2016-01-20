@@ -365,15 +365,26 @@
 
 						<select class="btn-u btn-brd btn-brd-hover btn-u-light"
 							name="occasionId">
+							<option value="" disabled selected>Select Event</option>
 							<c:forEach var="occasion" items="${occasions}">
 								<option value="${occasion.key}">${occasion.name}</option>
 							</c:forEach>
 						</select> <Select class="btn-u btn-brd btn-brd-hover btn-u-light"
-							name="locationId">
+							name="locationId"><option value="" disabled selected>Choose Location</option>
 							<c:forEach var="city" items="${cities}">
 								<option value="${city.key}">${city.name}</option>
 							</c:forEach>
 						</Select>
+						<Select class="btn-u btn-brd btn-brd-hover btn-u-light"
+							name="capacity">
+							<option value="" disabled selected>No. Of People</option>
+								<option>50-100</option>
+								<option>100-500</option>
+								<option>500-1000</option>
+								<option>1000-1500</option>
+							
+						</Select>
+						
 						<button type="submit"
 							class=" glyphicon glyphicon-search .btn-u-search.btn-brd-search btn-u btn-brd btn-brd-hover btn-u-light">
 							Search</button>
