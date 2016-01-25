@@ -16,7 +16,14 @@ public class User {
 	return key;
     }
 
-    public void setKey(Integer key) {
+    @Override
+	public String toString() {
+		return "User [key=" + key + ", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", password=" + password + ", confirmPassword=" + confirmPassword + ", contactNumber=" + contactNumber
+				+ ", userType=" + userType + "]";
+	}
+
+	public void setKey(Integer key) {
 	this.key = key;
     }
 

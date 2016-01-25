@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.go4venue.web.core.beans.LoginInfo;
 import com.go4venue.web.persistence.beans.User;
@@ -28,10 +29,11 @@ public class UserController {
      * @return registrationPage
      */
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String displayRegistrationPage(ModelMap model) {
+    public ModelAndView  displayRegistrationPage(ModelMap model) {
 	LOG.info("Registration page of the site was requested.");
-	String registrationPage = "Registration";
-	return registrationPage;
+	//String registrationPage = "Registration";
+	return new ModelAndView("Registration", "command", new User());
+	//return registrationPage;
     }
 
     /**
@@ -78,17 +80,18 @@ public class UserController {
      * @param user
      * @return
      */
-    @RequestMapping(value = "/registerUser", method = RequestMethod.POST, produces = "text/html")
-    public @ResponseBody String registerUser(@RequestBody User user) {
-	System.out.println(user.getUserType());
+    @RequestMapping(value = "/registerUser", method = RequestMethod.POST)
+    public  String registerUser(@ModelAttribute User user) {
+	System.out.println(user);
 	String responsePage = "Seeker";
 	
 	LOG.info("Register User of type : " + user.getUserType());
 	userService.saveUser(user);
-	if (("Owner").equalsIgnoreCase(user.getUserType())) {
+	/*if (("Owner").equalsIgnoreCase(user.getUserType())) {
 	    responsePage = "Owner";
-	}
+	}*/
 	System.out.println(responsePage);
 	return responsePage;
     }
+    
 }

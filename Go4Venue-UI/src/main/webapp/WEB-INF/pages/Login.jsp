@@ -31,9 +31,6 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="resources/assets/css/custom.css">
-    
-    <!-- FB Script -->
-    <script src="resources/work/scripts/libraries/fbLoginScript.js"></script>
 </head>
 
 <body>
@@ -45,11 +42,7 @@
     <div class="reg-block login-block-margin">
         <div class="reg-block-header">
             <h2>Sign In</h2>
-            <ul class="social-icons text-center">
-                <li><a class="rounded-x social_facebook" data-original-title="Facebook"></a></li>
-                <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="#"></a></li>
-               </ul>
-            <p>Don't Have Account? Click <a class="color-green" href="register">Sign Up</a> to registration.</p>
+              <p>Don't Have Account? Click <a class="color-green" href="register">Sign Up</a> to registration.</p>
         </div>
 		 <form id="loginForm" method="post" action="loginUser" modelAttribute="loginInfo">
 	        <div class="input-group margin-bottom-20">

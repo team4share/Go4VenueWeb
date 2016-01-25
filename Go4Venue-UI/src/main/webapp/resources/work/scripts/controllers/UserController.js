@@ -3,6 +3,7 @@ var app = angular.module('app', []);
 app.controller('UserController', function($scope, $http) {
 	$scope.submit = function(formData) {
 		console.log(formData.userType)
+		alert('hi');
 		$http({
 			method : 'POST',
 			url : 'registerUser',
