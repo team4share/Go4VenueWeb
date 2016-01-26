@@ -120,7 +120,7 @@ if(request.getParameter("code") != "null" || request.getParameter("code") != nul
         </div>
            <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <input type="submit" class="btn-u btn-block"  data-toggle="modal" data-target=".bs-example-modal-sm"/>Register
+                <input type="submit" class="btn-u btn-block"/>Register
             </div>
             </div>
 	</form:form>
@@ -130,7 +130,7 @@ if(request.getParameter("code") != "null" || request.getParameter("code") != nul
             </div> -->
             
             <!-- Popup modal for Otp -->
-                       <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <!--    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-sm">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -139,15 +139,21 @@ if(request.getParameter("code") != "null" || request.getParameter("code") != nul
                                     </div>
                                     <div class="modal-body">
                                       <p>Please Enter The OTP Sent On Your Mobile</p>
+                                      
+                                      <form:form method="POST" action="otp"> 
                                       <p>
-                                          <input class="form-control" type="text" placeholder="OTP" /></p>
+                                         <!--  <input class="form-control" type="text" placeholder="OTP" /> -->
+                                       <!--   <form:label path="otpString" class="form-control">OTP</form:label>
+            							<form:input path="otpString"/>
+                                         </p> -->
                                                
                                     </div>
-                                    <div class="modal-footer">
-                                  
-                                        <button type="button" class="btn-u btn-u-primary">Submit</button>
-                            <button type="button" class="btn-u btn-u-default-otp" data-dismiss="modal">Regenerate</button>
+                                  <!--    <div class="modal-footer">
+                                  	<input type="submit" class="btn-u btn-block" />Validate -->
+                                        <!-- <button type="button" class="btn-u btn-u-primary" onclick="">Submit</button> -->
+                            <!-- <button type="button" class="btn-u btn-u-default-otp" data-dismiss="modal">Regenerate</button> -->
                                       </div>
+                                     </form:form>
                                     
                                 </div>
                             </div>

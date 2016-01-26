@@ -10,7 +10,7 @@ public class User {
     private String confirmPassword;
     private String contactNumber;
     private String userType;
-    
+    private OTPString otpString;
     
     public Integer getKey() {
 	return key;
@@ -118,4 +118,12 @@ public class User {
     public void setLastName(String lastName) {
 	this.lastName = lastName;
     }
+
+	public OTPString getOtpString() {
+		return otpString;
+	}
+
+	public void setOtpString(OTPString otpString) {
+		this.otpString = otpString;
+	}
 }

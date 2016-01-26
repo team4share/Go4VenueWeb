@@ -3,6 +3,7 @@ package com.go4venue.web.controller;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.go4venue.web.core.beans.LoginInfo;
+import com.go4venue.web.persistence.beans.OTPString;
 import com.go4venue.web.persistence.beans.User;
 import com.go4venue.web.service.UserService;
 
@@ -21,6 +23,9 @@ public class UserController {
     private Logger LOG = Logger.getLogger(ApplicationController.class);
     @Autowired
     private UserService userService;
+    private User user;
+    private String authMessage;
+  
 
     /**
      * This method is being used to serve the Registration page of the website.
@@ -35,13 +40,12 @@ public class UserController {
 	return new ModelAndView("Registration", "command", new User());
 	//return registrationPage;
     }
+    
+  
 
-    /**
-     * This method is being used to serve the Registration page of the website.
-     * 
-     * @param model
-     * @return loginPage
-     */
+    
+
+
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String displayLoginPage(ModelMap model) {
 	LoginInfo loginInfo = new LoginInfo();
@@ -81,17 +85,57 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/registerUser", method = RequestMethod.POST)
-    public  String registerUser(@ModelAttribute User user) {
+    public  ModelAndView registerUser(@ModelAttribute User user) {
 	System.out.println(user);
 	String responsePage = "Seeker";
-	
 	LOG.info("Register User of type : " + user.getUserType());
-	userService.saveUser(user);
+//	userService.saveUser(user);
+	this.user = user;
 	/*if (("Owner").equalsIgnoreCase(user.getUserType())) {
 	    responsePage = "Owner";
 	}*/
+	OTPString otpString = new OTPString();
+	otpString.setOtpValue("2451");
+	user.setOtpString(otpString);
 	System.out.println(responsePage);
-	return responsePage;
+	return new ModelAndView("verifyOTP", "command", new OTPString());
     }
+    
+    
+    
+    @RequestMapping(value="/otp",method=RequestMethod.POST)
+    public  String validateOTP(@ModelAttribute OTPString otpString,Model model) {
+    	String page = "verifyOTP";
+    	if(otpString.getOtpValue().equals(user.getOtpString().getOtpValue())){
+    		userService.saveUser(user);
+    		this.setAuthMessage("OTP Verified");
+    		 model.addAttribute("error", "Authenticated");
+    		    
+    	}
+    	else{
+    		 model.addAttribute("error", "Not Authenticated");
+    		this.setAuthMessage("Not Verified");	
+    	}
+    	return "otpRedirect";
+    }
+
+
+
+
+
+
+	public String getAuthMessage() {
+		return authMessage;
+	}
+
+
+
+
+
+
+	public void setAuthMessage(String authMessage) {
+		this.authMessage = authMessage;
+	}
+    
     
 }
