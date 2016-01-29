@@ -10,7 +10,7 @@ app.controller('VenueListingController', function($scope, $http) {
 	console.log($scope.cities);
 	$scope.occasions = getOccasions();
 	console.log($scope.cities[0]);
-	$scope.orderProp= 'venueCapacity';
+	$scope.orderProp= 'capacity';
 	$scope.selectedCity = $scope.cities[0];
 	
 
@@ -22,6 +22,7 @@ app.controller('VenueListingController', function($scope, $http) {
 		venues_copy = angular.copy(getVenues());
 		for(var i=0;i<venues_copy.length;i++) {
 			var venueFacilities = venues_copy[i].amenities;
+			console.log(venueFacilities);
 			var array = venueFacilities.split(",");
 			$scope.venues[i].array = array;
 		}

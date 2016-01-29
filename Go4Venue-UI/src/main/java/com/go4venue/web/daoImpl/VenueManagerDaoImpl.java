@@ -88,5 +88,12 @@ public class VenueManagerDaoImpl extends CommonDBDao implements VenueManagerDao 
 	SQLQuery venueMappedQuery = getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("amenities");
 	return venueMappedQuery.list() != null && venueMappedQuery.list().size() > 0 ? (Amenities)venueMappedQuery.list().get(0) : null;
     }
+
+    @Override
+    public Amenities getAminitiesById(int id) {
+	String query = "Select * from amenities where code = '"+id+"'";
+	SQLQuery venueMappedQuery = getSessionFactory().getCurrentSession().createSQLQuery(query).addEntity("amenities");
+	return venueMappedQuery.list() != null && venueMappedQuery.list().size() > 0 ? (Amenities)venueMappedQuery.list().get(0) : null;
+    }
 	
 }

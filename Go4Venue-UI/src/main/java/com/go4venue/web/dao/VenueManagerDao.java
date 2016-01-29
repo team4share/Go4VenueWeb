@@ -26,4 +26,5 @@ public interface VenueManagerDao {
     	public Venue getVenueById(long id);
 	List<String> getVenueImages(long venueId);
 	public Amenities getAmenityByCode(String code);
+	public Amenities getAminitiesById(int id);
 }

@@ -67,16 +67,10 @@
 			return JSON.parse(cities);
 		}
 	</script>
-		
-		
-		
-		
 		<script
 			src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 		<script
 			src="resources/work/scripts/controllers/VenueListingController.js"></script>
-    
-    
 </head> 
 
 <body class="header-fixed">
@@ -176,11 +170,6 @@
 						  
 						  <select  class="input--select citySelect" ng-model="selectedCity" ng-change="getLocalities()" ng-options="city.name for city in cities">
 						  </select>
-  			
-
-                             
-                             
-                    
                                   </div>
                                 <br>
                                 <div class="locality">
@@ -374,58 +363,7 @@
                 </div><!--/end result category-->
                  <div class="filter-results">
                     <div ng-repeat="venueData in venues | filter : applyFilter() | orderBy:orderProp">
-                    
-                    	 <div class="list-product-description product-description-brd margin-bottom-30">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <a href="venue_description.html"><img class="img-responsive sm-margin-bottom-20" src="../assets/img/venue_images/venue-1.jpg" alt=""></a>
-                            </div> 
-                            <div class="col-sm-8 product-description">
-                                <div class="overflow-h margin-bottom-5">
-                                    <ul class="list-inline overflow-h">
-                                        <li><h4 class="title-price"><a href="venue_description.html">Vivanta by Taj Group |</a></h4></li>
-                                        <li><span class="gender text-lowercase"><i class="fa fa-map-marker font-purple">&nbsp; &nbsp;</i>Jodhpur Vila Near Airport</span></li>
-                                        <li class="pull-right">
-                                            <ul class="list-inline product-ratings">
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating-selected fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                                <li><i class="rating fa fa-star"></i></li>
-                                            </ul>
-                                        </li>
-                                    </ul>    
-                                    <div class="margin-bottom-10">
-                                        <span class="title-price margin-right-10"><i class="fa fa-rupee"></i> 600.00  per pax</span>
-                                        <span class="title-price margin-right-10"><i class="fa fa-users font-purple" ></i>  1000 people</span>
-                                    </div>    
-                                    <p class="margin-bottom-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin erat nec ornarevolu tpat. Etiam ut felis nec nisl eleifend lobortis. Aenean nibh est, hendrerit non conva.</p>
-                                    <ul class="list-inline add-to-wishlist margin-bottom-20">
-                                        
-                                       <i class="fa fa-cutlery"></i> <i class="fa fa-glass"></i><i class="fa fa-headphones"></i><i class="fa fa-bank"></i><i class="fa fa-car"></i><i class="fa fa-bolt"></i><i class="fa fa-wifi"></i><i class="fa fa-microphone"></i><i class="fa fa-video-camera"></i><i class="fa fa-lock"></i>
-                                    </ul>
-
-                                    <ul class="list-inline add-to-wishlist margin-bottom-20">
-                                        
-                                        
-                                        <li class="wishlist-in">
-                                            <i class="fa fa-heart"></i>
-                                            <a href="#">Add To Shortlist</a>
-                                        </li>
-                                        <li class="compare-in">
-                                            <i class="fa fa-exchange"></i>
-                                            <a href="#">Add to Compare</a>
-                                        </li>
-                                        <li class="compare-in">
-                                            <i class="fa fa-calendar"></i>
-                                            <a href="#">Check Availability</a>
-                                        </li>
-                                    </ul>
-                                   </div>    
-                            </div>
-                        </div>
-                    </div>    
-                    	
+                                        	
                     
 							<div
 								class="list-product-description product-description-brd margin-bottom-30">
@@ -439,7 +377,7 @@
 										<div class="overflow-h margin-bottom-5">
 											<ul class="list-inline overflow-h">
 												<li><h4 class="title-price">
-														<a href="getVenueDescription">{{venueData.venueName}}</a>
+														<a href="getVenueDescription">{{venueData.name}}</a>
 													</h4></li>
 												<li><span class="gender text-uppercase"></span></li>
 												<li class="pull-right">
@@ -454,11 +392,13 @@
 											</ul>
 											
 											<div class="margin-bottom-10">
-		                                        <span class="title-price margin-right-10"><i class="fa fa-rupee"></i> {{venueData.venuePrice}}  per pax</span>
-		                                        <span class="title-price margin-right-10"><i class="fa fa-users font-purple" ></i> {{venueData.venueCapacity}}</span>
+		                                        <span class="title-price margin-right-10"><i class="fa fa-rupee"></i> {{venueData.price}}</span>
+		                                        <span class="title-price margin-right-10"><i class="fa fa-users font-purple" ></i> {{venueData.capacity}}</span>
 		                                    </div>    
 		                                    
-                                   			<span ng-repeat="venueAmenity in venueData.array ">{{venueAmenity}}</span>
+                                   			<span ng-repeat="venueAmenity in venueData.array " class="venueAmenity">
+                             				<i	ng-class="venueAmenity"></i>
+                             				</span>
 											<p class="margin-bottom-20">{{venueData.venueDescription}}</p>
 											<ul class="list-inline add-to-wishlist margin-bottom-20">
 												<li class="wishlist-in"><i class="fa fa-heart"></i> <a
