@@ -29,8 +29,9 @@ public class VenueListingServiceImpl implements VenueListingService {
     public List<Venue> getVenueListing(VenueSearchInfo venueSearchInfo) {
 	List<Venue>venues = venueManagerDao.geVenueData(venueSearchInfo);
 	for(Venue venue : venues) {
-	    Amenities aminity = venueManagerDao.getAmenityByCode(venue.getAmenities());
-	    venue.setAmenities(getAmenityString(aminity.getCode()));
+	    System.out.println(venue.getAmenities());
+	    //Amenities aminity = venueManagerDao.getAmenityByCode(venue.getAmenities());
+	    venue.setAmenities(getAmenityString(venue.getAmenities()));
 	}
 	return venues;
     }
@@ -40,12 +41,17 @@ public class VenueListingServiceImpl implements VenueListingService {
 	int id = 0;
 	String css = "";
 	for(int i=0;i<array.length;i++) {
+	    System.out.println(array[i]);
 	    if(array[i]=='1') {
-		Amenities amenities = venueManagerDao.getAminitiesById(id);
-		
+		Amenities amenities = venueManagerDao.getAminitiesById(i+1);
+		css = css + amenities.getCss(); 
+		if(i<array.length){
+		    css = css+",";
+		}
 	    }
 	}
-	return null;
+	System.out.println(css);
+	return css;
     }
       
     @Override
