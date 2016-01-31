@@ -61,8 +61,7 @@
                                    
          <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <input type="submit" class="btn-u btn-block"/>Validate
-            </div>
+                <input type="submit" class="btn-u btn-block" value = "Validate"/></div>
          </div>
      </form:form>
        </div>
