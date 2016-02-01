@@ -16,6 +16,7 @@ import com.go4venue.web.core.beans.LoginInfo;
 import com.go4venue.web.persistence.beans.OTPString;
 import com.go4venue.web.persistence.beans.User;
 import com.go4venue.web.service.UserService;
+import org.kamranzafar.otp.*;
 
 @Controller
 public class UserController {
@@ -95,7 +96,8 @@ public class UserController {
 	    responsePage = "Owner";
 	}*/
 	OTPString otpString = new OTPString();
-	otpString.setOtpValue("2451");
+	String otpStr = OTP.generate("9873065413", "", 6, "totp");
+	otpString.setOtpValue(otpStr);
 	user.setOtpString(otpString);
 	System.out.println(responsePage);
 	return new ModelAndView("verifyOTP", "command", new OTPString());
