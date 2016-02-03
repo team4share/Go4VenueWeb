@@ -610,7 +610,7 @@
 						<!--/col-md-3-->
 						<!-- End About -->
 
-						<!-- Latest -->
+						<!-- Latest 
 						<div class="col-md-3 md-margin-bottom-40">
 							<div class="posts">
 								<div class="headline">
@@ -625,7 +625,7 @@
 											15, 2014</small></li>
 								</ul>
 							</div>
-						</div>
+						</div>-->
 						<!--/col-md-3-->
 						<!-- End Latest -->
 
