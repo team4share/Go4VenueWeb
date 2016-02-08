@@ -356,10 +356,17 @@
 				<h1>Get Set Go!!!</h1>
 
 				<br>
-				<button class="btn-u btn-brd btn-brd-hover btn-u-light">
-					<a href="#How_it_works"> </a>How It works
-				</button>
-				<div class="topbar-buttons Search-background">
+  
+            <br><div class="col-md-6 col-md-offset-3">
+            <div class="input-group">
+                    <input type="text" class="form-control" placeholder="I am looking for the venue...">
+                    <span class="input-group-btn">
+                        <button class="btn-u-search-Center" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+			
+			<div class="topbar-buttons Search-background">
 					<form action="listVenues" id="searchVenue" name="venueSearchForm"
 						method="post" modelAttribute="venueSearchInfo">
 
@@ -391,7 +398,7 @@
 
 
 					</form>
-				</div>He
+				</div>
 			</div>
 		</div>
 		<!-- End Image Gradient -->
@@ -610,7 +617,7 @@
 						<!--/col-md-3-->
 						<!-- End About -->
 
-						<!-- Latest -->
+						<!-- Latest 
 						<div class="col-md-3 md-margin-bottom-40">
 							<div class="posts">
 								<div class="headline">
@@ -625,7 +632,7 @@
 											15, 2014</small></li>
 								</ul>
 							</div>
-						</div>
+						</div>-->
 						<!--/col-md-3-->
 						<!-- End Latest -->
 
