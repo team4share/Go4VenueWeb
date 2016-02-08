@@ -96,7 +96,8 @@ public class UserController {
 	    responsePage = "Owner";
 	}*/
 	OTPString otpString = new OTPString();
-	String otpStr = OTP.generate("9873065413", "", 6, "totp");
+	String otpStr = OTP.generate("9873065413", "" + System.currentTimeMillis(), 4, "totp");
+	System.out.println(otpStr);
 	otpString.setOtpValue(otpStr);
 	user.setOtpString(otpString);
 	System.out.println(responsePage);
