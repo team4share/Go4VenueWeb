@@ -3,7 +3,7 @@
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="search">
 <!--<![endif]-->
 <head>
 <title>${title}</title>
@@ -43,9 +43,11 @@
     
 <link rel="stylesheet" href="resources/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
 
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="resources/work/scripts/libraries/angular.min.js"></script>
 <script src="resources/work/scripts/controllers/SearchController.js"></script>
+<script src="resources/work/scripts/libraries/ui-bootstrap.js"></script>
+<script src="resources/work/scripts/libraries/ui-bootstrap-tpls.js"></script>
+
 <!-- CSS Customization -->
 <link rel="stylesheet" href="resources/assets/css/custom.css">
 </head>
@@ -359,17 +361,21 @@
   
             <br><div class="col-md-6 col-md-offset-3">
             <div class="input-group">
-                    <input type="text" class="form-control" placeholder="I am looking for the venue...">
-                    <span class="input-group-btn">
-                        <button class="btn-u-search-Center" type="button"><i class="fa fa-search"></i></button>
+           			<form id="searchVenuesByName" name="searchVenuesByNameForm" method="post">
+	                    <input type="text"  class="form-control" id="venueName"
+								ng-model="pageData.venueName"
+								typeahead="venueName for venueName in getVenueNames($viewValue)" placeholder="I am looking for the venue..." />
+	                    <span class="input-group-btn">
+	                        <button class="btn-u-search-Center" type="button" ng-click="submit(pageData)"><i class="fa fa-search"></i></button>
                     </span>
+                    </form>
                 </div>
             </div>
 			
 			<div class="topbar-buttons Search-background">
 					<form action="listVenues" id="searchVenue" name="venueSearchForm"
 						method="post" modelAttribute="venueSearchInfo">
-
+					
 						<select class="btn-u btn-brd btn-brd-hover btn-u-light"
 							name="occasionId">
 							<option value="" disabled selected>Select Event</option>
