@@ -356,12 +356,12 @@
 		<div class="interactive-slider-v2">
 			<div class="container" ng-controller="SearchController">
 				<h1>Get Set Go!!!</h1>
-
+<form id="searchVenuesByName" name="searchVenuesByNameForm" method="post">
 				<br>
   
             <br><div class="col-md-6 col-md-offset-3">
             <div class="input-group">
-           			<form id="searchVenuesByName" name="searchVenuesByNameForm" method="post">
+           			
 	                    <input type="text"  class="form-control" id="venueName"
 								ng-model="pageData.venueName"
 								typeahead="venueName for venueName in getVenueNames($viewValue)" placeholder="I am looking for the venue..." />
@@ -408,42 +408,43 @@
 			</div>
 		</div>
 		<!-- End Image Gradient -->
+ <!--=== Content Part ===-->
+    <div class="container content-sm">
+    	<!-- Service Blocks -->
+    	<div class="row margin-bottom-30">
+        	<div class="col-md-4">
+        		<div class="service">
+                    <i class="fa fa-globe service-icon"></i>
+        			<div class="desc">
+        				<h4> Browse </h4>
+                        <p>Search From The Wide Range Of Handpicked Venues. </p>
+        			</div>
+        		</div>
+        	</div>
+           
+        		  
+        
+        	<div class="col-md-4">
+        		<div class="service">
+                    <i class="fa fa-hand-o-up service-icon"></i>
+        			<div class="desc">
+        				<h4>Select &amp; Get Qoutes</h4>
+                        <p>Select The Venue And Get Personalized Quote That Fits In Your Budget. </p>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="service">
+                    <i class="fa fa-phone service-icon"></i>
+        			<div class="desc">
+        				<h4>Book Venue</h4>
+                        <p> Give Us A Call And We Will Take Care Of Rest. </p>
+        			</div>
+        		</div>
+        	</div>
+    	</div>
+    	<!-- End Service Blokcs -->
 
-		<!--=== Content Part ===-->
-		<div class="container content-sm" id="how_it_works">
-			<!-- Service Blocks -->
-			<div class="row margin-bottom-30">
-				<div class="col-md-4">
-					<div class="service">
-						<i class="fa fa-globe service-icon"></i>
-						<div class="desc">
-							<h4>Browse</h4>
-							<p>Browse From The Wide Range Of Venues Available</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="service">
-						<i class="fa fa-hand-o-up service-icon"></i>
-						<div class="desc">
-							<h4>Select &amp; Get Qoutes</h4>
-							<p>Select The Venues As Per Your Requirement, Grab The Best
-								Deal</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service">
-						<i class="fa fa-desktop service-icon"></i>
-						<div class="desc">
-							<h4>Book Online</h4>
-							<p>Be The First To Book Venue Of Your Choice</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Service Blokcs -->
 
 			<!-- Recent Works -->
 			<div class="headline">
