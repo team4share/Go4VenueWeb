@@ -248,10 +248,10 @@
                           <li>
                                 <div class="language-bar">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <span class="heading"><i class="fa  fa-map-marker "></i> Jaipur</span>
+                                        <span class="heading"><i class="fa  fa-map-marker "></i>&nbsp;<label id="current_city" style="color: white"> Jaipur</label></span>
                                     </a>
                                     <ul class="languages-dropdown" role="menu">
-                                        <li class="active">
+                                        <li>
                                             <a href="#">Jaipur</a>
                                         </li>
                                         <li><a href="#">Delhi</a></li>
@@ -755,6 +755,7 @@
 Masking.initMasking();
         Datepicker.initDatepicker();
         Validation.initValidation();
+        setCity();
 		});
 	</script>
 	<!--[if lt IE 9]>
