@@ -35,11 +35,11 @@ public class UserController {
      * @return registrationPage
      */
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public ModelAndView  displayRegistrationPage(ModelMap model) {
+    public String  displayRegistrationPage(ModelMap model) {
+    	User user = new User();
+    	model.put("user", user);
 	LOG.info("Registration page of the site was requested.");
-	//String registrationPage = "Registration";
-	return new ModelAndView("Registration", "command", new User());
-	//return registrationPage;
+	return "Registration";
     }
     
   
@@ -70,7 +70,7 @@ public class UserController {
 	    if (isValidUser) {
 		LOG.info("User Login Successful");
 		User user = userService.getUser(loginInfo);
-		responsePage = user.getUserType().equalsIgnoreCase("owner")?"OwnerDashboard":"SeekerDashboard";
+		responsePage = "OwnerDashboard";
 		
 	    } 
 	} catch (Exception e) {

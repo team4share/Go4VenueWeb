@@ -69,45 +69,40 @@ if(request.getParameter("code") != "null" || request.getParameter("code") != nul
              </ul>
             <p>Already Signed Up? Click <a class="color-green" href="login">Sign In</a> to login your account.</p>
         </div>
-        <form:form method="POST" action="registerUser">
+     
+         <form id="registerForm" method="post" action="registerUser" modelAttribute="user">
+         
          <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <!-- <input type="text" class="form-control" placeholder="FirstName" name = "formData.firstName"> -->
-            <form:label path="firstName" class="form-control">First Name</form:label>
-            <form:input path="firstName"/>
-        </div>
+             <input type="text" class="form-control" placeholder="FirstName" name = "firstName"> 
+                  </div>
         <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-     <!--        <input type="text" class="form-control" placeholder="LastName" name = "formData.lastName"> -->
-                 <form:label path="lastName" class="form-control">Last Name</form:label>
-            	<form:input path="lastName"/>
+           <input type="text" class="form-control" placeholder="LastName" name = "lastName">
+       
         </div>
         
         <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-            <!-- <input type="email" class="form-control" placeholder="Email" name = "formData.email"> -->
-             <form:label path="email" class="form-control">Email</form:label>
-             <form:input path="email"/>
+             <input type="email" class="form-control" placeholder="Email" name = "email">
+            
         </div>
         <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span>
             <!--=== Code added for extra field +91 ===-->
             <span class="input-group-addon"><i class="fa">+91</i></span>  
-          <!--  <input type="text" class="form-control" placeholder="Contact Number" name = "formData.contactNumber" maxlength="10"> -->
-            <form:label path="contactNumber" class="form-control">Contact Number</form:label>
-            <form:input path="contactNumber"/>
+          <input type="text" class="form-control" placeholder="Contact Number" name = "contactNumber" maxlength="10"> 
+    
         </div>
         <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-            <!-- <input type="text" class="form-control" placeholder="Password" name = "formData.password"> -->
-             <form:label path="password" class="form-control">Password</form:label>
-            <form:input path="password"/>
+             <input type="text" class="form-control" placeholder="Password" name = "password"> 
+         
         </div>
         <div class="input-group margin-bottom-5">
             <span class="input-group-addon"><i class="fa fa-key"></i></span>
-           <!--  <input type="text" class="form-control" placeholder="Confirm Password" name = "formData.confirmPassword"> -->
-               <form:label path="confirmPassword" class="form-control">Confirm Password</form:label>
-            	<form:input path="confirmPassword"/>
+             <input type="text" class="form-control" placeholder="Confirm Password" name = "confirmPassword"> 
+        
         </div>
         
                 <hr>
@@ -123,47 +118,12 @@ if(request.getParameter("code") != "null" || request.getParameter("code") != nul
                 <input type="submit" class="btn-u btn-block"/>Register
             </div>
             </div>
-	</form:form>
-        <div class="row">
-           <!--  <div class="col-md-10 col-md-offset-1">
-                <button class="btn-u btn-block">Register</button>
-            </div> -->
-            
-            <!-- Popup modal for Otp -->
-                    <!--    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-sm">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                                        <h4 id="myLargeModalLabel3" class="modal-title">Verify Mobile Number</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                      <p>Please Enter The OTP Sent On Your Mobile</p>
-                                      
-                                      <form:form method="POST" action="otp"> 
-                                      <p>
-                                         <!--  <input class="form-control" type="text" placeholder="OTP" /> -->
-                                       <!--   <form:label path="otpString" class="form-control">OTP</form:label>
-            							<form:input path="otpString"/>
-                                         </p> -->
-                                               
-                                    </div>
-                                  <!--    <div class="modal-footer">
-                                  	<input type="submit" class="btn-u btn-block" />Validate -->
-                                        <!-- <button type="button" class="btn-u btn-u-primary" onclick="">Submit</button> -->
-                            <!-- <button type="button" class="btn-u btn-u-default-otp" data-dismiss="modal">Regenerate</button> -->
-                                      </div>
-                                     </form:form>
-                                    
-                                </div>
-                            </div>
-                        </div>  
-                                    <!-- End Popup Modal For Otp -->
-            
+	</form>
+       
         </div>
     </div>
     <!--End Reg Block-->
-</div><!--/container-->
+<!--/container-->
 <!--=== End Content Part ===-->
 
 <!-- JS Global Compulsory -->
