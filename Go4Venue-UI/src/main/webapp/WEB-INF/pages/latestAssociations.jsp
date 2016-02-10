@@ -103,50 +103,45 @@
                 </div>
                 <!-- End Clients Block-->
 
-                <!-- Pagination -->
-                <div class="text-center md-margin-bottom-30">
-                    <ul class="pagination">
-                        <li><a href="#">«</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li class="active"><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">»</a></li>
-                    </ul>
-                </div>
-                <!-- End Pagination -->
+               
             </div><!--/col-md-9-->
 
         	<div class="col-md-3">
             	<!-- Our Services -->
                 <div class="who margin-bottom-30">
-                    <div class="headline"><h2>Our Services</h2></div>
-                    <p>At vero eos et accusamus et iusto odio dign issimos ducimus qui blanditiis iusto.</p>
+                    <div class="headline"><h2>Benefits Of Association</h2></div>
+                 
                     <ul class="list-unstyled">
-                        <li><a href="#"><i class="fa fa-desktop"></i>Vivamus imperdiet condimentum</a></li>
-                        <li><a href="#"><i class="fa fa-bullhorn"></i>Anim pariatur cliche squid</a></li>
-                        <li><a href="#"><i class="fa fa-globe"></i>Eget placerat felis consectetur</a></li>
-                        <li><a href="#"><i class="fa fa-group"></i>Condimentum diam eget placerat</a></li>
+                        <li><a href="#"><i class="fa fa-desktop"></i>Connect with Large Customer Base </a></li>
+                        <li><a href="#"><i class="fa fa-bullhorn"></i>Bring Your Venue online</a></li>
+                        <li><a href="#"><i class="fa fa-globe"></i>Personalised Representative Venue</a></li>
+                        <li><a href="#"><i class="fa fa-group"></i>Get Online Bookings</a></li>
                     </ul>
                 </div>
 
             	<!-- About Us -->
-            	<div class="headline"><h2>About Us</h2></div>
-                <div class="margin-bottom-30">
-                    <p>At vero eos et acc usamus et iusto odio dign issimos ducimus atque corrupti quos.</p>
-                    <p>dolores etrerum facilis est etenim a feugiat cupiditate non quos. <a class="linked color-green" href="#">Read more</a></p>
+            	
+                
+                <div class="who margin-bottom-30">
+                    <div class="headline"><h2>Booking Benefits</h2></div>
+                 
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fa fa-desktop"></i>Personalised Quotes </a></li>
+                        <li><a href="#"><i class="fa fa-bullhorn"></i>Compare &amp; Decide</a></li>
+                        <li><a href="#"><i class="fa fa-globe"></i>Runtime Venue Availability</a></li>
+                        <li><a href="#"><i class="fa fa-group"></i>Go4Venue Customer Support</a></li>
+                    </ul>
                 </div>
 
             	<!-- Contact Us -->
                 <div class="who margin-bottom-30">
-                    <div class="headline"><h2>Contact Us</h2></div>
-                    <p>Vero facilis est etenim a feugiat cupiditate non quos etrerum facilis.</p>
+                    <div class="headline"><h2>Get In Touch</h2></div>
+                   
                     <ul class="list-unstyled">
-                        <li><a href="#"><i class="fa fa-home"></i>5B amus ED554, New York, US</a></li>
-                        <li><a href="#"><i class="fa fa-envelope-o"></i>infp@example.com</a></li>
-                        <li><a href="#"><i class="fa fa-phone"></i>1(222) 5x86 x97x</a></li>
-                        <li><a href="#"><i class="fa fa-globe"></i>http://www.example.com</a></li>
+                       <li><a href="#"><i class="fa fa-phone"></i>+91-8446380577</a></li>
+                        <li><a href="#"><i class="fa fa-envelope-o"></i>support@go4Venue.com</a></li>
+                        
+                      
                     </ul>
                 </div>
             </div><!--/col-md-3-->
